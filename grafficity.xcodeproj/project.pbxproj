@@ -61,6 +61,7 @@
 		361329022195AE5500C22703 /* grafficity */ = {
 			isa = PBXGroup;
 			children = (
+				CC56EEB52195CF2700EA9EE9 /* map */,
 				361329032195AE5500C22703 /* AppDelegate.swift */,
 				361329052195AE5500C22703 /* ViewController.swift */,
 				361329072195AE5500C22703 /* Main.storyboard */,
@@ -77,6 +78,13 @@
 				EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC56EEB52195CF2700EA9EE9 /* map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = map;
 			sourceTree = "<group>";
 		};
 		D6C070E6D3F372A31CDF6F82 /* Pods */ = {
@@ -99,6 +107,7 @@
 				361328FC2195AE5500C22703 /* Sources */,
 				361328FD2195AE5500C22703 /* Frameworks */,
 				361328FE2195AE5500C22703 /* Resources */,
+				6D1C4BAD9E3C7AB8C4B68582 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,6 +181,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D1C4BAD9E3C7AB8C4B68582 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Grafficity/Pods-Grafficity-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Grafficity/Pods-Grafficity-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
