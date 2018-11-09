@@ -12,7 +12,19 @@
 		361329092195AE5500C22703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 361329072195AE5500C22703 /* Main.storyboard */; };
 		3613290B2195AE5700C22703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3613290A2195AE5700C22703 /* Assets.xcassets */; };
 		3613290E2195AE5700C22703 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3613290C2195AE5700C22703 /* LaunchScreen.storyboard */; };
+		361329182195D3D400C22703 /* ARMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361329172195D3D400C22703 /* ARMapViewController.swift */; };
+		361329252195D59E00C22703 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3613291B2195D59E00C22703 /* CGPoint+Extensions.swift */; };
+		361329262195D59E00C22703 /* SceneLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3613291C2195D59E00C22703 /* SceneLocationView.swift */; };
+		361329272195D59E00C22703 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3613291D2195D59E00C22703 /* LocationManager.swift */; };
+		361329282195D59E00C22703 /* FloatingPoint+Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3613291E2195D59E00C22703 /* FloatingPoint+Radians.swift */; };
+		361329292195D59E00C22703 /* SceneLocationEstimate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3613291F2195D59E00C22703 /* SceneLocationEstimate+Extensions.swift */; };
+		3613292A2195D59E00C22703 /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361329202195D59E00C22703 /* SCNNode+Extensions.swift */; };
+		3613292B2195D59E00C22703 /* SceneLocationEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361329212195D59E00C22703 /* SceneLocationEstimate.swift */; };
+		3613292C2195D59E00C22703 /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361329222195D59E00C22703 /* SCNVector3+Extensions.swift */; };
+		3613292D2195D59E00C22703 /* LocationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361329232195D59E00C22703 /* LocationNode.swift */; };
+		3613292E2195D59E00C22703 /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361329242195D59E00C22703 /* CLLocation+Extensions.swift */; };
 		388F6888A1F834ACF29DAFA3 /* Pods_Grafficity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */; };
+		F466930649D311D43CB64503 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669BADCD098F28B9034EAF /* ImageUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +36,20 @@
 		3613290A2195AE5700C22703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3613290D2195AE5700C22703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3613290F2195AE5700C22703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		361329172195D3D400C22703 /* ARMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMapViewController.swift; sourceTree = "<group>"; };
+		3613291B2195D59E00C22703 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		3613291C2195D59E00C22703 /* SceneLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationView.swift; sourceTree = "<group>"; };
+		3613291D2195D59E00C22703 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		3613291E2195D59E00C22703 /* FloatingPoint+Radians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Radians.swift"; sourceTree = "<group>"; };
+		3613291F2195D59E00C22703 /* SceneLocationEstimate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneLocationEstimate+Extensions.swift"; sourceTree = "<group>"; };
+		361329202195D59E00C22703 /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
+		361329212195D59E00C22703 /* SceneLocationEstimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationEstimate.swift; sourceTree = "<group>"; };
+		361329222195D59E00C22703 /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
+		361329232195D59E00C22703 /* LocationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNode.swift; sourceTree = "<group>"; };
+		361329242195D59E00C22703 /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
 		C1B81B9F12C2C28645D866C7 /* Pods-Grafficity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grafficity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grafficity/Pods-Grafficity.debug.xcconfig"; sourceTree = "<group>"; };
 		EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grafficity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4669BADCD098F28B9034EAF /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +85,8 @@
 		361329022195AE5500C22703 /* grafficity */ = {
 			isa = PBXGroup;
 			children = (
+				361329192195D3E000C22703 /* utils */,
+				361329152195D2E400C22703 /* view_controllers */,
 				361329032195AE5500C22703 /* AppDelegate.swift */,
 				361329052195AE5500C22703 /* ViewController.swift */,
 				361329072195AE5500C22703 /* Main.storyboard */,
@@ -69,6 +95,48 @@
 				3613290F2195AE5700C22703 /* Info.plist */,
 			);
 			path = grafficity;
+			sourceTree = "<group>";
+		};
+		361329152195D2E400C22703 /* view_controllers */ = {
+			isa = PBXGroup;
+			children = (
+				361329162195D3B600C22703 /* ARrMap */,
+			);
+			path = view_controllers;
+			sourceTree = "<group>";
+		};
+		361329162195D3B600C22703 /* ARrMap */ = {
+			isa = PBXGroup;
+			children = (
+				361329172195D3D400C22703 /* ARMapViewController.swift */,
+			);
+			path = ARrMap;
+			sourceTree = "<group>";
+		};
+		361329192195D3E000C22703 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				3613291A2195D51500C22703 /* ARCL */,
+				F4669BADCD098F28B9034EAF /* ImageUtils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		3613291A2195D51500C22703 /* ARCL */ = {
+			isa = PBXGroup;
+			children = (
+				3613291B2195D59E00C22703 /* CGPoint+Extensions.swift */,
+				361329242195D59E00C22703 /* CLLocation+Extensions.swift */,
+				3613291E2195D59E00C22703 /* FloatingPoint+Radians.swift */,
+				3613291D2195D59E00C22703 /* LocationManager.swift */,
+				361329232195D59E00C22703 /* LocationNode.swift */,
+				361329212195D59E00C22703 /* SceneLocationEstimate.swift */,
+				3613291F2195D59E00C22703 /* SceneLocationEstimate+Extensions.swift */,
+				3613291C2195D59E00C22703 /* SceneLocationView.swift */,
+				361329202195D59E00C22703 /* SCNNode+Extensions.swift */,
+				361329222195D59E00C22703 /* SCNVector3+Extensions.swift */,
+			);
+			path = ARCL;
 			sourceTree = "<group>";
 		};
 		8D76646A2AF0BA911399190F /* Frameworks */ = {
@@ -181,8 +249,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3613292D2195D59E00C22703 /* LocationNode.swift in Sources */,
+				361329262195D59E00C22703 /* SceneLocationView.swift in Sources */,
+				3613292B2195D59E00C22703 /* SceneLocationEstimate.swift in Sources */,
+				361329182195D3D400C22703 /* ARMapViewController.swift in Sources */,
+				3613292E2195D59E00C22703 /* CLLocation+Extensions.swift in Sources */,
+				361329272195D59E00C22703 /* LocationManager.swift in Sources */,
+				3613292A2195D59E00C22703 /* SCNNode+Extensions.swift in Sources */,
 				361329062195AE5500C22703 /* ViewController.swift in Sources */,
+				361329252195D59E00C22703 /* CGPoint+Extensions.swift in Sources */,
 				361329042195AE5500C22703 /* AppDelegate.swift in Sources */,
+				361329282195D59E00C22703 /* FloatingPoint+Radians.swift in Sources */,
+				361329292195D59E00C22703 /* SceneLocationEstimate+Extensions.swift in Sources */,
+				3613292C2195D59E00C22703 /* SCNVector3+Extensions.swift in Sources */,
+				F466930649D311D43CB64503 /* ImageUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +412,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F4S954HGMF;
 				INFOPLIST_FILE = grafficity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -351,6 +432,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F4S954HGMF;
 				INFOPLIST_FILE = grafficity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
