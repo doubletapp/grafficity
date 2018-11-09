@@ -15,6 +15,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        DispatchQueue.main.async { [weak self] in
+            let arPlacementStoryboard = UIStoryboard(name: "ARPlacementObject", bundle: Bundle.main)
+            
+            if let vc = arPlacementStoryboard.instantiateInitialViewController() as? ARObjectPlacementViewController {
+                
+                vc.sourceImage = UIImage(named: "testImage")
+                self?.present(vc, animated: true)
+            }
+        }
+    }
 }
 

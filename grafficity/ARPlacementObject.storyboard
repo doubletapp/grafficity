@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JaV-NU-ibF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Object Placement View Controller-->
+        <scene sceneID="E2C-Ye-Qcs">
+            <objects>
+                <viewController id="JaV-NU-ibF" customClass="ARObjectPlacementViewController" customModule="Grafficity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pbX-LI-XQj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2op-8i-htG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xBU-0S-6jj" firstAttribute="trailing" secondItem="2op-8i-htG" secondAttribute="trailing" id="BAd-Ps-b4L"/>
+                            <constraint firstItem="2op-8i-htG" firstAttribute="leading" secondItem="xBU-0S-6jj" secondAttribute="leading" id="HhO-5U-cbV"/>
+                            <constraint firstItem="2op-8i-htG" firstAttribute="top" secondItem="pbX-LI-XQj" secondAttribute="top" id="XQl-k6-MlE"/>
+                            <constraint firstAttribute="bottom" secondItem="2op-8i-htG" secondAttribute="bottom" id="wQM-Vk-Mev"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xBU-0S-6jj"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="2op-8i-htG" id="zYn-s4-Wpi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwC-nL-4jA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="238" y="-95"/>
+        </scene>
+    </scenes>
+</document>
