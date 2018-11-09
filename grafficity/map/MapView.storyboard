@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3se-Yx-VRn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="y6e-Pv-14k">
+            <objects>
+                <viewController id="3se-Yx-VRn" customClass="MapViewController" customModule="Grafficity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fk1-8m-4A7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMf-G6-gX9" userLabel="Map View" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="Pbz-e9-bBG">
+                                <rect key="frame" x="0.0" y="35" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3se-Yx-VRn" id="rIl-km-DND"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kby-IN-MZD" userLabel="Filter Button">
+                                <rect key="frame" x="324" y="53" width="22" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="BNh-Ks-3v9"/>
+                                    <constraint firstAttribute="height" constant="16" id="UH8-ec-Hwu"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="filter"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcO-Yy-T6e" userLabel="Display Location Button">
+                                <rect key="frame" x="307" y="599" width="53" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="HTt-vk-fou"/>
+                                    <constraint firstAttribute="height" constant="53" id="iHG-a5-6Nm"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="detectLocation"/>
+                                <connections>
+                                    <action selector="didTapDisplayLocation:" destination="3se-Yx-VRn" eventType="touchUpInside" id="ekk-ID-eRg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpU-iM-Npd" userLabel="Switch Mode Button">
+                                <rect key="frame" x="307" y="531" width="53" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="uqo-0f-Iud"/>
+                                    <constraint firstAttribute="height" constant="53" id="uui-iX-uAh"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="switchToLiveCamera"/>
+                                <connections>
+                                    <action selector="didTapSwitchMode:" destination="3se-Yx-VRn" eventType="touchUpInside" id="yoe-ha-NxW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w8i-gE-zH0" firstAttribute="trailing" secondItem="Pbz-e9-bBG" secondAttribute="trailing" id="2A7-SY-QTF"/>
+                            <constraint firstItem="w8i-gE-zH0" firstAttribute="bottom" secondItem="mcO-Yy-T6e" secondAttribute="bottom" constant="15" id="8uA-dQ-coj"/>
+                            <constraint firstItem="w8i-gE-zH0" firstAttribute="trailing" secondItem="hpU-iM-Npd" secondAttribute="trailing" constant="15" id="CnS-2D-JYt"/>
+                            <constraint firstItem="rMf-G6-gX9" firstAttribute="top" secondItem="Fk1-8m-4A7" secondAttribute="top" id="Dfr-Ct-rTP"/>
+                            <constraint firstItem="rMf-G6-gX9" firstAttribute="leading" secondItem="Fk1-8m-4A7" secondAttribute="leading" id="R3o-uA-T5Z"/>
+                            <constraint firstAttribute="trailing" secondItem="rMf-G6-gX9" secondAttribute="trailing" id="XXz-td-d4x"/>
+                            <constraint firstItem="mcO-Yy-T6e" firstAttribute="top" secondItem="hpU-iM-Npd" secondAttribute="bottom" constant="15" id="YeO-Js-3TD"/>
+                            <constraint firstItem="Kby-IN-MZD" firstAttribute="trailing" secondItem="Pbz-e9-bBG" secondAttribute="trailing" constant="-29" id="abT-ib-e7P"/>
+                            <constraint firstItem="Kby-IN-MZD" firstAttribute="centerY" secondItem="Pbz-e9-bBG" secondAttribute="centerY" constant="-2" id="bP6-h7-JLc"/>
+                            <constraint firstItem="w8i-gE-zH0" firstAttribute="trailing" secondItem="mcO-Yy-T6e" secondAttribute="trailing" constant="15" id="bYQ-mi-BdU"/>
+                            <constraint firstAttribute="bottom" secondItem="rMf-G6-gX9" secondAttribute="bottom" id="bwU-va-62M"/>
+                            <constraint firstItem="Pbz-e9-bBG" firstAttribute="top" secondItem="w8i-gE-zH0" secondAttribute="top" constant="15" id="hYI-QS-nNj"/>
+                            <constraint firstItem="Pbz-e9-bBG" firstAttribute="leading" secondItem="w8i-gE-zH0" secondAttribute="leading" id="ytG-tJ-LaF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w8i-gE-zH0"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayLocationButton" destination="mcO-Yy-T6e" id="BvA-U0-w50"/>
+                        <outlet property="filterButton" destination="Kby-IN-MZD" id="eaE-Dg-fo4"/>
+                        <outlet property="mapView" destination="rMf-G6-gX9" id="ohY-aa-h03"/>
+                        <outlet property="searchBar" destination="Pbz-e9-bBG" id="FAg-BZ-pbs"/>
+                        <outlet property="searchDisplayController" destination="iKV-Dj-ZrT" id="99k-el-nbG"/>
+                        <outlet property="switchModeButton" destination="hpU-iM-Npd" id="iP8-21-XBo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n6Q-Hw-aor" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="iKV-Dj-ZrT">
+                    <connections>
+                        <outlet property="delegate" destination="3se-Yx-VRn" id="lkf-4S-c1h"/>
+                        <outlet property="searchBar" destination="Pbz-e9-bBG" id="Piq-GT-VZx"/>
+                        <outlet property="searchContentsController" destination="3se-Yx-VRn" id="iNI-Zz-Qb3"/>
+                        <outlet property="searchResultsDataSource" destination="3se-Yx-VRn" id="TVd-fX-j7d"/>
+                        <outlet property="searchResultsDelegate" destination="3se-Yx-VRn" id="9C1-Vd-yql"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="-120.08995502248877"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="detectLocation" width="53" height="53"/>
+        <image name="filter" width="22" height="16"/>
+        <image name="switchToLiveCamera" width="53" height="53"/>
+    </resources>
+</document>
