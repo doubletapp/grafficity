@@ -24,6 +24,10 @@ public protocol SceneLocationViewDelegate: class {
     func sceneLocationViewDidSetupSceneNode(sceneLocationView: SceneLocationView, sceneNode: SCNNode)
 
     func sceneLocationViewDidUpdateLocationAndScaleOfLocationNode(sceneLocationView: SceneLocationView, locationNode: LocationNode)
+
+
+    func showPreview()
+    func hidePreview()
 }
 
 ///Different methods which can be used when determining locations (such as the user's location).
@@ -42,6 +46,7 @@ public enum LocationEstimateMethod {
 public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
     ///The limit to the scene, in terms of what data is considered reasonably accurate.
     ///Measured in meters.
+
     private static let sceneLimit = 100.0
 
     public static let minDistance = 100.0
@@ -167,8 +172,31 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
         addGestureRecognizer(tap)
     }
     
+    func hasParentLocationNode(node: SCNNode) -> Bool {
+        if node is LocationAnnotationNode {
+            return true
+        }
+        
+        if let parent = node.parent {
+            return hasParentLocationNode(node: parent)
+        }
+        
+        return false
+    }
+    
     @objc func onTapAction(_ sender: UITapGestureRecognizer) {
         let location = sender.location(in: self)
+
+        let markerHitTest = hitTest(location, options: [
+            SCNHitTestOption.ignoreHiddenNodes: true
+        ])
+
+        locationDelegate?.hidePreview()
+
+        if markerHitTest.contains(where: { hasParentLocationNode(node: $0.node) }) {
+            locationDelegate?.showPreview()
+            return
+        }
         
         guard let firstHitResult = hitTest(location, types: .existingPlaneUsingExtent).first,
             let anchor = firstHitResult.anchor as? ARPlaneAnchor else { return }
@@ -203,6 +231,8 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
                 scene.rootNode.addChildNode(imageNode)
                 
                 self.imageNode = imageNode
+
+                locationDelegate?.showPreview()
             } else {
                 
                 imageNode?.removeFromParentNode()
@@ -215,6 +245,8 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
                 let anchor = ARAnchor(transform: hitTestResult.worldTransform)
                 objectAnchor = anchor
                 session.add(anchor: anchor)
+
+                locationDelegate?.showPreview()
             } else {
                 
                 session.remove(anchor: anchor)
@@ -505,7 +537,6 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
                 locationNode.scale = SCNVector3(x: scale, y: scale, z: scale)
             } else if distance < SceneLocationView.minDistance {
                 locationNode.hideAlternativeNode()
-                let scale = 100 / Float(distance)
                 adjustedDistance = distance
                 let position = SCNVector3(
                     x: currentPosition.x + Float(locationTranslation.longitudeTranslation),

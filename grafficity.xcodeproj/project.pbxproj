@@ -28,6 +28,9 @@
 		361329382197018800C22703 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361329372197018800C22703 /* ProfileViewController.swift */; };
 		3613293A2197042700C22703 /* ProfileHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361329392197042700C22703 /* ProfileHeaderCell.xib */; };
 		3613293C21972D9A00C22703 /* ProfileFilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3613293B21972D9A00C22703 /* ProfileFilterCell.xib */; };
+		3613293E21978C7600C22703 /* ARPreviewMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3613293D21978C7600C22703 /* ARPreviewMarker.xib */; };
+		3613294021979BCF00C22703 /* ProfilePhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3613293F21979BCF00C22703 /* ProfilePhotosCell.swift */; };
+		3613294221979BDB00C22703 /* ProfilePhotosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3613294121979BDB00C22703 /* ProfilePhotosCell.xib */; };
 		388F6888A1F834ACF29DAFA3 /* Pods_Grafficity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */; };
 		6E0CB48D2195D3CB00B6C90A /* ARObjectPlacementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */; };
 		6E0CB48F2195D9CE00B6C90A /* ARPlacementObject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */; };
@@ -51,6 +54,7 @@
 		CC56EEB72195D37E00EA9EE9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */; };
 		CC56EEB92195D38D00EA9EE9 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */; };
 		CC56EEBB2195DFD500EA9EE9 /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */; };
+		F46690A673AAB901C095B49F /* ARPreviewMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46696540A0B8A5236EFC572 /* ARPreviewMarker.swift */; };
 		F466925C54A5EE5398D8A8AC /* TableViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46692FB653880B2B94810BB /* TableViewUtils.swift */; };
 		F466930649D311D43CB64503 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669BADCD098F28B9034EAF /* ImageUtils.swift */; };
 		F4669344C7F8B5A4FAEA94DC /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F466992334BD048DDD29D9BF /* ProfileHeaderCell.swift */; };
@@ -86,6 +90,9 @@
 		361329372197018800C22703 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		361329392197042700C22703 /* ProfileHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderCell.xib; sourceTree = "<group>"; };
 		3613293B21972D9A00C22703 /* ProfileFilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFilterCell.xib; sourceTree = "<group>"; };
+		3613293D21978C7600C22703 /* ARPreviewMarker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARPreviewMarker.xib; sourceTree = "<group>"; };
+		3613293F21979BCF00C22703 /* ProfilePhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotosCell.swift; sourceTree = "<group>"; };
+		3613294121979BDB00C22703 /* ProfilePhotosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilePhotosCell.xib; sourceTree = "<group>"; };
 		6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObjectPlacementViewController.swift; sourceTree = "<group>"; };
 		6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARPlacementObject.storyboard; sourceTree = "<group>"; };
 		6E0CB4902196C0D600B6C90A /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +120,7 @@
 		F466925A7975BFFFAD238BC7 /* ProfileFilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileFilterCell.swift; sourceTree = "<group>"; };
 		F46692FB653880B2B94810BB /* TableViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewUtils.swift; sourceTree = "<group>"; };
 		F46694D4A06671DC9E1F1872 /* CollectionViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewUtils.swift; sourceTree = "<group>"; };
+		F46696540A0B8A5236EFC572 /* ARPreviewMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARPreviewMarker.swift; sourceTree = "<group>"; };
 		F466992334BD048DDD29D9BF /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
 		F4669AE17D2601BA0D12CF8F /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		F4669BADCD098F28B9034EAF /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
@@ -186,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				361329172195D3D400C22703 /* ARMapViewController.swift */,
+				F46696540A0B8A5236EFC572 /* ARPreviewMarker.swift */,
+				3613293D21978C7600C22703 /* ARPreviewMarker.xib */,
 			);
 			path = ARMap;
 			sourceTree = "<group>";
@@ -334,6 +344,8 @@
 				361329392197042700C22703 /* ProfileHeaderCell.xib */,
 				F466925A7975BFFFAD238BC7 /* ProfileFilterCell.swift */,
 				3613293B21972D9A00C22703 /* ProfileFilterCell.xib */,
+				3613293F21979BCF00C22703 /* ProfilePhotosCell.swift */,
+				3613294121979BDB00C22703 /* ProfilePhotosCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -411,7 +423,9 @@
 				3613293A2197042700C22703 /* ProfileHeaderCell.xib in Resources */,
 				3613293C21972D9A00C22703 /* ProfileFilterCell.xib in Resources */,
 				CC56EEB92195D38D00EA9EE9 /* MapView.storyboard in Resources */,
+				3613294221979BDB00C22703 /* ProfilePhotosCell.xib in Resources */,
 				361329092195AE5500C22703 /* Main.storyboard in Resources */,
+				3613293E21978C7600C22703 /* ARPreviewMarker.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +487,7 @@
 				361329382197018800C22703 /* ProfileViewController.swift in Sources */,
 				CC10CBB62196C385001DB120 /* UIViewUtils.swift in Sources */,
 				CC10CBBB21972D79001DB120 /* SettingsScreenViewController.swift in Sources */,
+				3613294021979BCF00C22703 /* ProfilePhotosCell.swift in Sources */,
 				361329062195AE5500C22703 /* ViewController.swift in Sources */,
 				CC10CBAC21963161001DB120 /* ArtistRecord.swift in Sources */,
 				CC10CBB221965921001DB120 /* PreviewMarker.swift in Sources */,
@@ -498,6 +513,7 @@
 				F4669454E12C1D1900890FEB /* CollectionViewUtils.swift in Sources */,
 				F46699CD5999FBF176D8B765 /* BaseCollectionViewCell.swift in Sources */,
 				F4669FE6C773C9E600D61445 /* ProfileFilterCell.swift in Sources */,
+				F46690A673AAB901C095B49F /* ARPreviewMarker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,7 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8L7988R5NG;
+				DEVELOPMENT_TEAM = F4S954HGMF;
 				INFOPLIST_FILE = grafficity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -665,7 +681,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8L7988R5NG;
+				DEVELOPMENT_TEAM = F4S954HGMF;
 				INFOPLIST_FILE = grafficity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
