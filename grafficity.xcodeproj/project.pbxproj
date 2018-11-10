@@ -235,13 +235,6 @@
 			path = ProfileScreen;
 			sourceTree = "<group>";
 		};
-		6E0CB4962196E8BC00B6C90A /* Scenes objects */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Scenes objects";
-			sourceTree = "<group>";
-		};
 		6EE5F4BD219728D80025D1DC /* ARBodrov */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,7 +629,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3LUSBKM7UR;
+				DEVELOPMENT_TEAM = F4S954HGMF;
 				INFOPLIST_FILE = grafficity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -656,7 +649,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3LUSBKM7UR;
+				DEVELOPMENT_TEAM = F4S954HGMF;
 				INFOPLIST_FILE = grafficity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
