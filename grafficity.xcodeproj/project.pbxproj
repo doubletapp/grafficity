@@ -21,6 +21,7 @@
 		CC10CBB221965921001DB120 /* PreviewMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB121965921001DB120 /* PreviewMarker.swift */; };
 		CC10CBB421965B62001DB120 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB321965B62001DB120 /* BaseView.swift */; };
 		CC10CBB62196C385001DB120 /* UIViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB52196C385001DB120 /* UIViewUtils.swift */; };
+		CC10CBB8219718A4001DB120 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB7219718A4001DB120 /* ColorUtils.swift */; };
 		CC56EEB72195D37E00EA9EE9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */; };
 		CC56EEB92195D38D00EA9EE9 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */; };
 		CC56EEBB2195DFD500EA9EE9 /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */; };
@@ -44,6 +45,7 @@
 		CC10CBB121965921001DB120 /* PreviewMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMarker.swift; sourceTree = "<group>"; };
 		CC10CBB321965B62001DB120 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		CC10CBB52196C385001DB120 /* UIViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtils.swift; sourceTree = "<group>"; };
+		CC10CBB7219718A4001DB120 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MapStyle.json; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				CC10CBA6219608C1001DB120 /* ImageUtils.swift */,
 				CC10CBB52196C385001DB120 /* UIViewUtils.swift */,
+				CC10CBB7219718A4001DB120 /* ColorUtils.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				CC10CBA7219608C1001DB120 /* ImageUtils.swift in Sources */,
 				361329042195AE5500C22703 /* AppDelegate.swift in Sources */,
 				CC10CBB421965B62001DB120 /* BaseView.swift in Sources */,
+				CC10CBB8219718A4001DB120 /* ColorUtils.swift in Sources */,
 				CC10CBAE21963409001DB120 /* ModelGenerator.swift in Sources */,
 				CC10CBA92196302A001DB120 /* GraffityRecord.swift in Sources */,
 			);

@@ -11,9 +11,30 @@ class MapViewController: UIViewController {
     @IBOutlet weak var switchModeButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
     
+    @IBOutlet weak var markersSetSwitch: UISegmentedControl! {
+        didSet {
+            markersSetSwitch.layer.cornerRadius = 20
+            markersSetSwitch.layer.borderColor = UIColor.interfaceAccentColor.cgColor
+            markersSetSwitch.layer.borderWidth = 1.0
+            markersSetSwitch.layer.masksToBounds = true
+            
+            markersSetSwitch.addTarget(self, action: #selector(didTapMarkersSwitch), for: .valueChanged)
+        }
+    }
+    
     @IBOutlet weak var bottomSheetTopOffestConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var bottomView: UIView! {
+        didSet {
+            let edgePanGesture = UIPanGestureRecognizer(target: self, action: #selector(showBottomSheetAction(sender:)))
+            bottomView.addGestureRecognizer(edgePanGesture)
+            
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(openSelectedGraffity))
+            bottomView.addGestureRecognizer(tapGesture)
+        }
+    }
+    
+    
     @IBOutlet weak var bottomPreview: MyImageView!
     @IBOutlet weak var bottomArtist: UILabel!
     @IBOutlet weak var bottomGraffity: UILabel!
@@ -51,7 +72,11 @@ class MapViewController: UIViewController {
         }
     }
     
+    var subscriptions: [GraffityRecord] = []
+    var popular: [GraffityRecord] = []
+    
     private var bottomSheetExpanded = false
+    var selectedGraffity: GraffityRecord?
     
     override func viewDidLoad() {
         initializeLocation()
@@ -60,9 +85,13 @@ class MapViewController: UIViewController {
     
     
     @IBAction func didTapDisplayLocation(_ sender: Any) {
+        if let location = currentLocation {
+            mapView.animate(toLocation: location.coordinate)
+        }
     }
     
     @IBAction func didTapSwitchMode(_ sender: Any) {
+        // TODO: launch camera mode
     }
     
     
@@ -98,18 +127,33 @@ class MapViewController: UIViewController {
     }
     
     private func seedMarkers() {
+        subscriptions = ModelGenerator.generateGraffities()
+        popular = ModelGenerator.generateGraffities()
+        
+        setMarkers(subscription: markersSetSwitch.selectedSegmentIndex == 1)
+    }
+    
+    private func setMarkers(subscription: Bool) {
         mapView.clear()
-        let records = ModelGenerator.generateGraffities()
+        if subscription {
+            displayMarkers(subscriptions)
+        } else {
+            displayMarkers(popular)
+        }
+    }
+    
+    private func displayMarkers(_ records: [GraffityRecord]) {
         for record in records {
-        	let marker = GMSMarker(position: record.location!)
+            let marker = GMSMarker(position: record.location!)
             marker.title = record.name
             marker.map = mapView
+            marker.userData = record
             if record.rating < 0.5 {
                 marker.icon = UIImage(named: "mapPin")
             } else {
                 let icon = UIImage.getPreviewMarker(
-                    	with: record.preview,
-                        size: CGFloat(36 + (record.rating - 0.5) * 44))
+                    with: record.preview,
+                    size: CGFloat(36 + (record.rating - 0.5) * 44))
                 let previewMarker = PreviewMarker(frame: CGRect(
                     origin: .zero,
                     size: CGSize(width: icon!.size.width, height: icon!.size.height + 22)
@@ -185,11 +229,17 @@ extension MapViewController: UISearchBarDelegate {
     }
 }
 
+// MARK: - GMSMapViewDelegate
+
 extension MapViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         let camera = GMSCameraPosition.camera(withLatitude: marker.position.latitude, longitude: marker.position.longitude, zoom: 17.0)
         mapView.animate(to: camera)
+        if let record = marker.userData as? GraffityRecord {
+            selectedGraffity = record
+            prepareBottomSheet(with: record)
+        }
         if !bottomSheetExpanded {
 			showBottomSheet()
         }
@@ -243,6 +293,64 @@ extension MapViewController: GMSMapViewDelegate {
             
             ss.view.setNeedsLayout()
             ss.view.layoutIfNeeded()
+        }
+    }
+    
+    private func prepareBottomSheet(with record: GraffityRecord) {
+        bottomArtist.text = record.artist
+        bottomGraffity.text = record.name
+        bottomPreview.image = record.preview
+        if let current = currentLocation,
+            	let lat = record.location?.latitude,
+        		let lng = record.location?.longitude {
+            let location = CLLocation(latitude: lat, longitude: lng)
+            let distance = current.distance(from: location)
+            if distance > 1000 {
+                bottomDistance.text = String(format: "%.1f км", distance / 1000)
+            } else {
+                bottomDistance.text = String(format: "%.0f м", distance)
+            }
+        } else {
+            bottomDistance.text = ""
+        }
+    }
+    
+    @objc func showBottomSheetAction(sender: UIPanGestureRecognizer) {
+        if sender.state == .changed {
+            let y = sender.translation(in: mapView).y
+            if y > 0 {
+                let height = bottomView.bounds.height
+                
+                var mapPadding = mapView.padding
+                mapPadding.bottom = max(0, height - y)
+                mapView.padding = mapPadding
+                
+                bottomSheetTopOffestConstraint.constant = -(max(0, height - y))
+            }
+        } else if sender.state == .ended {
+            if mapView.padding.bottom < bottomView.bounds.height * 0.7 {
+                hideBottomSheet()
+            } else {
+                showBottomSheet()
+            }
+        }
+    }
+    
+    @objc func openSelectedGraffity() {
+        guard let graffity = selectedGraffity else {
+            return
+        }
+        print("Open graffiy \(graffity.name)")
+    }
+}
+
+extension MapViewController {
+    
+    @objc func didTapMarkersSwitch() {
+        if markersSetSwitch.selectedSegmentIndex == 0 {
+            setMarkers(subscription: false)
+        } else {
+            setMarkers(subscription: true)
         }
     }
 }

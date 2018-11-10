@@ -29,6 +29,18 @@
                                     <outlet property="delegate" destination="3se-Yx-VRn" id="rIl-km-DND"/>
                                 </connections>
                             </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K6A-5E-bNp" userLabel="SegmentSwitch">
+                                <rect key="frame" x="67.5" y="102" width="240" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8JU-k5-Qd7"/>
+                                    <constraint firstAttribute="width" constant="240" id="kqQ-dl-84o"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Популярные"/>
+                                    <segment title="Подписки"/>
+                                </segments>
+                                <color key="tintColor" red="0.8784313725490196" green="0.29019607843137252" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kby-IN-MZD" userLabel="Filter Button">
                                 <rect key="frame" x="324" y="53" width="22" height="16"/>
                                 <constraints>
@@ -180,6 +192,7 @@
                             <constraint firstItem="w8i-gE-zH0" firstAttribute="trailing" secondItem="Lrl-Pw-ng6" secondAttribute="trailing" id="Dgd-lP-4BH"/>
                             <constraint firstItem="Lrl-Pw-ng6" firstAttribute="leading" secondItem="w8i-gE-zH0" secondAttribute="leading" id="HMe-1Z-vjV"/>
                             <constraint firstItem="rMf-G6-gX9" firstAttribute="leading" secondItem="Fk1-8m-4A7" secondAttribute="leading" id="R3o-uA-T5Z"/>
+                            <constraint firstItem="K6A-5E-bNp" firstAttribute="centerX" secondItem="w8i-gE-zH0" secondAttribute="centerX" id="UUB-Hr-X1j"/>
                             <constraint firstAttribute="trailing" secondItem="rMf-G6-gX9" secondAttribute="trailing" id="XXz-td-d4x"/>
                             <constraint firstItem="mcO-Yy-T6e" firstAttribute="top" secondItem="hpU-iM-Npd" secondAttribute="bottom" constant="15" id="YeO-Js-3TD"/>
                             <constraint firstItem="Kby-IN-MZD" firstAttribute="trailing" secondItem="Pbz-e9-bBG" secondAttribute="trailing" constant="-29" id="abT-ib-e7P"/>
@@ -189,6 +202,7 @@
                             <constraint firstItem="Pbz-e9-bBG" firstAttribute="top" secondItem="w8i-gE-zH0" secondAttribute="top" constant="15" id="hYI-QS-nNj"/>
                             <constraint firstItem="Lrl-Pw-ng6" firstAttribute="top" secondItem="rMf-G6-gX9" secondAttribute="bottom" id="hcN-hu-pYV"/>
                             <constraint firstAttribute="bottom" secondItem="Lrl-Pw-ng6" secondAttribute="bottom" priority="750" constant="-171" id="q7N-pr-Wd1"/>
+                            <constraint firstItem="K6A-5E-bNp" firstAttribute="top" secondItem="Pbz-e9-bBG" secondAttribute="bottom" constant="11" id="ukb-gD-WqY"/>
                             <constraint firstItem="Pbz-e9-bBG" firstAttribute="leading" secondItem="w8i-gE-zH0" secondAttribute="leading" id="ytG-tJ-LaF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w8i-gE-zH0"/>
@@ -204,6 +218,7 @@
                         <outlet property="displayLocationButton" destination="mcO-Yy-T6e" id="BvA-U0-w50"/>
                         <outlet property="filterButton" destination="Kby-IN-MZD" id="eaE-Dg-fo4"/>
                         <outlet property="mapView" destination="rMf-G6-gX9" id="ohY-aa-h03"/>
+                        <outlet property="markersSetSwitch" destination="K6A-5E-bNp" id="iw9-Kr-Kgc"/>
                         <outlet property="searchBar" destination="Pbz-e9-bBG" id="FAg-BZ-pbs"/>
                         <outlet property="searchDisplayController" destination="iKV-Dj-ZrT" id="99k-el-nbG"/>
                         <outlet property="switchModeButton" destination="hpU-iM-Npd" id="iP8-21-XBo"/>
