@@ -29,6 +29,8 @@
 		3613293A2197042700C22703 /* ProfileHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361329392197042700C22703 /* ProfileHeaderCell.xib */; };
 		3613293C21972D9A00C22703 /* ProfileFilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3613293B21972D9A00C22703 /* ProfileFilterCell.xib */; };
 		3613293E21978C7600C22703 /* ARPreviewMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3613293D21978C7600C22703 /* ARPreviewMarker.xib */; };
+		3613294021979BCF00C22703 /* ProfilePhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3613293F21979BCF00C22703 /* ProfilePhotosCell.swift */; };
+		3613294221979BDB00C22703 /* ProfilePhotosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3613294121979BDB00C22703 /* ProfilePhotosCell.xib */; };
 		388F6888A1F834ACF29DAFA3 /* Pods_Grafficity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */; };
 		6E0CB48D2195D3CB00B6C90A /* ARObjectPlacementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */; };
 		6E0CB48F2195D9CE00B6C90A /* ARPlacementObject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */; };
@@ -87,6 +89,8 @@
 		361329392197042700C22703 /* ProfileHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderCell.xib; sourceTree = "<group>"; };
 		3613293B21972D9A00C22703 /* ProfileFilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFilterCell.xib; sourceTree = "<group>"; };
 		3613293D21978C7600C22703 /* ARPreviewMarker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARPreviewMarker.xib; sourceTree = "<group>"; };
+		3613293F21979BCF00C22703 /* ProfilePhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotosCell.swift; sourceTree = "<group>"; };
+		3613294121979BDB00C22703 /* ProfilePhotosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilePhotosCell.xib; sourceTree = "<group>"; };
 		6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObjectPlacementViewController.swift; sourceTree = "<group>"; };
 		6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARPlacementObject.storyboard; sourceTree = "<group>"; };
 		6E0CB4902196C0D600B6C90A /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
@@ -326,6 +330,8 @@
 				361329392197042700C22703 /* ProfileHeaderCell.xib */,
 				F466925A7975BFFFAD238BC7 /* ProfileFilterCell.swift */,
 				3613293B21972D9A00C22703 /* ProfileFilterCell.xib */,
+				3613293F21979BCF00C22703 /* ProfilePhotosCell.swift */,
+				3613294121979BDB00C22703 /* ProfilePhotosCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				3613293A2197042700C22703 /* ProfileHeaderCell.xib in Resources */,
 				3613293C21972D9A00C22703 /* ProfileFilterCell.xib in Resources */,
 				CC56EEB92195D38D00EA9EE9 /* MapView.storyboard in Resources */,
+				3613294221979BDB00C22703 /* ProfilePhotosCell.xib in Resources */,
 				361329092195AE5500C22703 /* Main.storyboard in Resources */,
 				3613293E21978C7600C22703 /* ARPreviewMarker.xib in Resources */,
 			);
@@ -465,6 +472,7 @@
 				361329382197018800C22703 /* ProfileViewController.swift in Sources */,
 				CC10CBB62196C385001DB120 /* UIViewUtils.swift in Sources */,
 				CC10CBBB21972D79001DB120 /* SettingsScreenViewController.swift in Sources */,
+				3613294021979BCF00C22703 /* ProfilePhotosCell.swift in Sources */,
 				361329062195AE5500C22703 /* ViewController.swift in Sources */,
 				CC10CBAC21963161001DB120 /* ArtistRecord.swift in Sources */,
 				CC10CBB221965921001DB120 /* PreviewMarker.swift in Sources */,
