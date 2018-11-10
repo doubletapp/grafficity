@@ -74,6 +74,8 @@ class ARMapViewController: UIViewController {
                     userInfo: nil,
                     repeats: true)
         }
+
+        view.backgroundColor = .white
     }
 
     override func viewWillAppear(_ animated: Bool) {
