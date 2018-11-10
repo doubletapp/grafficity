@@ -5,6 +5,7 @@ import UIKit
 class MainViewController: UITabBarController {
     
     var imagePicker: UIImagePickerController?
+    let centralButton = UIButton(type: .custom)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,19 +48,24 @@ class MainViewController: UITabBarController {
     private func addCentralButton() {
         guard let centralButtonImage = UIImage(named: "tabbar_plus_icon") else { return }
 
-        let centralButton = UIButton(type: .custom)
-
         centralButton.addTarget(self, action: #selector(addButtonAction), for: .touchUpInside)
 
-        centralButton.frame = CGRect(x: 0, y: 0, width: centralButtonImage.size.width, height: centralButtonImage.size.height)
         centralButton.setBackgroundImage(centralButtonImage, for: .normal)
         centralButton.setBackgroundImage(centralButtonImage, for: .highlighted)
-        
-        centralButton.center = CGPoint(x: tabBar.center.x, y: 14)
+
 
         tabBar.addSubview(centralButton)
     }
-    
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        guard let centralButtonImage = UIImage(named: "tabbar_plus_icon") else { return }
+
+        centralButton.frame = CGRect(x: 0, y: 0, width: centralButtonImage.size.width, height: centralButtonImage.size.height)
+        centralButton.center = CGPoint(x: tabBar.center.x, y: 14)
+    }
+
     private func initImagePickerController() {
         
         let imagePicker = UIImagePickerController()
