@@ -152,12 +152,7 @@
 				361329192195D3E000C22703 /* utils */,
 				361329032195AE5500C22703 /* AppDelegate.swift */,
 				361329052195AE5500C22703 /* ViewController.swift */,
-				6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */,
-				6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */,
-				6E0CB4902196C0D600B6C90A /* StatusViewController.swift */,
 				361329072195AE5500C22703 /* Main.storyboard */,
-				6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */,
-				6E0CB4942196E4F300B6C90A /* ARObject3DViewController.storyboard */,
 				3613290A2195AE5700C22703 /* Assets.xcassets */,
 				6E0CB4B72196E94200B6C90A /* art.scnassets */,
 				3613290C2195AE5700C22703 /* LaunchScreen.storyboard */,
@@ -169,6 +164,8 @@
 		361329152195D2E400C22703 /* view_controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6EE5F4BE219729000025D1DC /* ARObject */,
+				6EE5F4BD219728D80025D1DC /* ARBodrov */,
 				361329342197016600C22703 /* ProfileScreen */,
 				3613292F2196E62C00C22703 /* MainScreen */,
 				361329162195D3B600C22703 /* ARMap */,
@@ -231,6 +228,25 @@
 				F46691766237A349C7E10527 /* cells */,
 			);
 			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		6EE5F4BD219728D80025D1DC /* ARBodrov */ = {
+			isa = PBXGroup;
+			children = (
+				6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */,
+				6E0CB4902196C0D600B6C90A /* StatusViewController.swift */,
+				6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */,
+			);
+			path = ARBodrov;
+			sourceTree = "<group>";
+		};
+		6EE5F4BE219729000025D1DC /* ARObject */ = {
+			isa = PBXGroup;
+			children = (
+				6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */,
+				6E0CB4942196E4F300B6C90A /* ARObject3DViewController.storyboard */,
+			);
+			path = ARObject;
 			sourceTree = "<group>";
 		};
 		8D76646A2AF0BA911399190F /* Frameworks */ = {
@@ -597,14 +613,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F4S954HGMF;
+				DEVELOPMENT_TEAM = 3LUSBKM7UR;
 				INFOPLIST_FILE = grafficity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.doubletapp.grafficity;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.doubletapp.grafficity.art;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -617,14 +633,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F4S954HGMF;
+				DEVELOPMENT_TEAM = 3LUSBKM7UR;
 				INFOPLIST_FILE = grafficity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.doubletapp.grafficity;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.doubletapp.grafficity.art;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
