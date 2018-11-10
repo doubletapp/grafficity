@@ -26,6 +26,7 @@
 		361329332196E67600C22703 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361329322196E67600C22703 /* MainViewController.swift */; };
 		388F6888A1F834ACF29DAFA3 /* Pods_Grafficity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */; };
 		F466930649D311D43CB64503 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669BADCD098F28B9034EAF /* ImageUtils.swift */; };
+		F466948594E66FCF469EE50D /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669C3BCCE1BECBC4A15356 /* ColorUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		C1B81B9F12C2C28645D866C7 /* Pods-Grafficity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grafficity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grafficity/Pods-Grafficity.debug.xcconfig"; sourceTree = "<group>"; };
 		EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grafficity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4669BADCD098F28B9034EAF /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		F4669C3BCCE1BECBC4A15356 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				3613291A2195D51500C22703 /* ARCL */,
 				F4669BADCD098F28B9034EAF /* ImageUtils.swift */,
+				F4669C3BCCE1BECBC4A15356 /* ColorUtils.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				361329292195D59E00C22703 /* SceneLocationEstimate+Extensions.swift in Sources */,
 				3613292C2195D59E00C22703 /* SCNVector3+Extensions.swift in Sources */,
 				F466930649D311D43CB64503 /* ImageUtils.swift in Sources */,
+				F466948594E66FCF469EE50D /* ColorUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

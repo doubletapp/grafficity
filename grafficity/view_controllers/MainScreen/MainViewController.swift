@@ -13,13 +13,15 @@ class MainViewController: UITabBarController {
         let profileViewController = UIViewController()
         let settingsViewController = UIViewController()
 
-        mapViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "tabbar_map_icon"), selectedImage: UIImage(named: "tabbar_map_icon"))
-        feedViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "tabbar_feed_icon"), selectedImage: UIImage(named: "tabbar_feed_icon"))
-        profileViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "tabbar_profile_icon"), selectedImage: UIImage(named: "tabbar_profile_icon"))
-        settingsViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "tabbar_settings_icon"), selectedImage: UIImage(named: "tabbar_settings_icon"))
+        mapViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "tabbar_map_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "tabbar_map_icon"))
+        feedViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "tabbar_feed_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "tabbar_feed_icon"))
+        profileViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "tabbar_profile_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "tabbar_profile_icon"))
+        settingsViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "tabbar_settings_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "tabbar_settings_icon"))
+        addViewController.tabBarItem.isEnabled = false
 
         addCentralButton()
 
+        tabBar.tintColor = UIColor(netHex: 0xe04a3d)
         tabBar.barTintColor = .white
         tabBar.backgroundColor = .white
 
@@ -42,7 +44,8 @@ class MainViewController: UITabBarController {
         tabBar.addSubview(centralButton)
     }
 
-    func addButtonAction() {
-        //TODO show add screen
+    @objc func addButtonAction() {
+        print("add button selected")
     }
 }
+
