@@ -44,6 +44,8 @@
 		CC10CBB421965B62001DB120 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB321965B62001DB120 /* BaseView.swift */; };
 		CC10CBB62196C385001DB120 /* UIViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB52196C385001DB120 /* UIViewUtils.swift */; };
 		CC10CBB8219718A4001DB120 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB7219718A4001DB120 /* ColorUtils.swift */; };
+		CC10CBBB21972D79001DB120 /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBBA21972D79001DB120 /* SettingsScreenViewController.swift */; };
+		CC10CBBD21972D96001DB120 /* SettingsScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC10CBBC21972D96001DB120 /* SettingsScreenView.storyboard */; };
 		CC56EEB72195D37E00EA9EE9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */; };
 		CC56EEB92195D38D00EA9EE9 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */; };
 		CC56EEBB2195DFD500EA9EE9 /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */; };
@@ -98,6 +100,8 @@
 		CC10CBB321965B62001DB120 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		CC10CBB52196C385001DB120 /* UIViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtils.swift; sourceTree = "<group>"; };
 		CC10CBB7219718A4001DB120 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		CC10CBBA21972D79001DB120 /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
+		CC10CBBC21972D96001DB120 /* SettingsScreenView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsScreenView.storyboard; sourceTree = "<group>"; };
 		CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MapStyle.json; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 			children = (
 				6EE5F4BE219729000025D1DC /* ARObject */,
 				6EE5F4BD219728D80025D1DC /* ARBodrov */,
+				CC10CBB921972C74001DB120 /* settings */,
 				361329342197016600C22703 /* ProfileScreen */,
 				3613292F2196E62C00C22703 /* MainScreen */,
 				361329162195D3B600C22703 /* ARMap */,
@@ -230,6 +235,13 @@
 			path = ProfileScreen;
 			sourceTree = "<group>";
 		};
+		6E0CB4962196E8BC00B6C90A /* Scenes objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Scenes objects";
+			sourceTree = "<group>";
+		};
 		6EE5F4BD219728D80025D1DC /* ARBodrov */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +287,15 @@
 				CC10CBAD21963409001DB120 /* ModelGenerator.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		CC10CBB921972C74001DB120 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				CC10CBBA21972D79001DB120 /* SettingsScreenViewController.swift */,
+				CC10CBBC21972D96001DB120 /* SettingsScreenView.storyboard */,
+			);
+			path = settings;
 			sourceTree = "<group>";
 		};
 		CC56EEB52195CF2700EA9EE9 /* map */ = {
@@ -370,6 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC10CBBD21972D96001DB120 /* SettingsScreenView.storyboard in Resources */,
 				CC10CBB021965909001DB120 /* PreviewMarker.xib in Resources */,
 				3613290E2195AE5700C22703 /* LaunchScreen.storyboard in Resources */,
 				6E0CB4B82196E94200B6C90A /* art.scnassets in Resources */,
@@ -442,6 +464,7 @@
 				3613292A2195D59E00C22703 /* SCNNode+Extensions.swift in Sources */,
 				361329382197018800C22703 /* ProfileViewController.swift in Sources */,
 				CC10CBB62196C385001DB120 /* UIViewUtils.swift in Sources */,
+				CC10CBBB21972D79001DB120 /* SettingsScreenViewController.swift in Sources */,
 				361329062195AE5500C22703 /* ViewController.swift in Sources */,
 				CC10CBAC21963161001DB120 /* ArtistRecord.swift in Sources */,
 				CC10CBB221965921001DB120 /* PreviewMarker.swift in Sources */,
