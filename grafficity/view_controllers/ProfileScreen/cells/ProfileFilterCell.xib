@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KOA-8z-YK3" customClass="ProfileFilterCell" customModule="Grafficity" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="63"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="406" height="63"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVu-3M-6jy">
+                        <rect key="frame" x="0.0" y="0.0" width="406" height="63"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="406" id="V0D-Ij-AJb"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IA2-v1-3Z9">
+                        <rect key="frame" x="213" y="3" width="173" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="37" id="gk3-RA-NbM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="По популярности"/>
+                        <connections>
+                            <action selector="filterPopularityAction" destination="KOA-8z-YK3" eventType="touchUpInside" id="nwN-Z7-WCX"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQU-bj-8Sc">
+                        <rect key="frame" x="20" y="3" width="173" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="37" id="cX9-Pa-izp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="По дате"/>
+                        <connections>
+                            <action selector="filterDateAction" destination="KOA-8z-YK3" eventType="touchUpInside" id="pGU-Nr-Peu"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="UQU-bj-8Sc" firstAttribute="width" secondItem="IA2-v1-3Z9" secondAttribute="width" id="1cH-9v-aS6"/>
+                <constraint firstAttribute="top" secondItem="VVu-3M-6jy" secondAttribute="top" id="4Yi-1f-rfm"/>
+                <constraint firstAttribute="trailing" secondItem="VVu-3M-6jy" secondAttribute="trailing" id="PeV-gm-wRe"/>
+                <constraint firstItem="IA2-v1-3Z9" firstAttribute="leading" secondItem="UQU-bj-8Sc" secondAttribute="trailing" priority="999" constant="20" id="Xvc-6t-3RZ"/>
+                <constraint firstAttribute="trailing" secondItem="IA2-v1-3Z9" secondAttribute="trailing" constant="20" id="Zve-T0-sxB"/>
+                <constraint firstAttribute="bottom" secondItem="UQU-bj-8Sc" secondAttribute="bottom" priority="999" constant="3" id="bEg-y9-W3r"/>
+                <constraint firstItem="UQU-bj-8Sc" firstAttribute="leading" secondItem="KOA-8z-YK3" secondAttribute="leading" constant="20" id="o4U-bi-sSX"/>
+                <constraint firstItem="IA2-v1-3Z9" firstAttribute="top" secondItem="KOA-8z-YK3" secondAttribute="top" constant="3" id="osz-kP-eO4"/>
+                <constraint firstItem="UQU-bj-8Sc" firstAttribute="top" secondItem="KOA-8z-YK3" secondAttribute="top" constant="3" id="ukj-FK-oUU"/>
+                <constraint firstItem="VVu-3M-6jy" firstAttribute="bottom" secondItem="KOA-8z-YK3" secondAttribute="bottom" id="wut-hm-UCe"/>
+                <constraint firstAttribute="bottom" secondItem="IA2-v1-3Z9" secondAttribute="bottom" priority="999" constant="3" id="y8J-aE-U7z"/>
+                <constraint firstItem="VVu-3M-6jy" firstAttribute="leading" secondItem="KOA-8z-YK3" secondAttribute="leading" id="zyN-0G-1fZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="brZ-ed-1Gr"/>
+            <size key="customSize" width="406" height="63"/>
+            <connections>
+                <outlet property="filterDateButton" destination="UQU-bj-8Sc" id="el3-bz-GG1"/>
+                <outlet property="filterPopularityButton" destination="IA2-v1-3Z9" id="Ivh-v3-teV"/>
+                <outlet property="widthConstraint" destination="V0D-Ij-AJb" id="Wne-MP-ZHR"/>
+            </connections>
+            <point key="canvasLocation" x="254.40000000000001" y="132.68365817091455"/>
+        </collectionViewCell>
+    </objects>
+</document>
