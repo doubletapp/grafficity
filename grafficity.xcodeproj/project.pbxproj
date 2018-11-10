@@ -28,13 +28,6 @@
 		361329382197018800C22703 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361329372197018800C22703 /* ProfileViewController.swift */; };
 		3613293A2197042700C22703 /* ProfileHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361329392197042700C22703 /* ProfileHeaderCell.xib */; };
 		388F6888A1F834ACF29DAFA3 /* Pods_Grafficity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */; };
-		F466925C54A5EE5398D8A8AC /* TableViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46692FB653880B2B94810BB /* TableViewUtils.swift */; };
-		F466930649D311D43CB64503 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669BADCD098F28B9034EAF /* ImageUtils.swift */; };
-		F4669344C7F8B5A4FAEA94DC /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F466992334BD048DDD29D9BF /* ProfileHeaderCell.swift */; };
-		F4669454E12C1D1900890FEB /* CollectionViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46694D4A06671DC9E1F1872 /* CollectionViewUtils.swift */; };
-		F466948594E66FCF469EE50D /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669C3BCCE1BECBC4A15356 /* ColorUtils.swift */; };
-		F46699CD5999FBF176D8B765 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669AE17D2601BA0D12CF8F /* BaseCollectionViewCell.swift */; };
-		F4669EB67289415DAC5A1553 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669E10CC48746278540913 /* BaseTableViewCell.swift */; };
 		6E0CB48D2195D3CB00B6C90A /* ARObjectPlacementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */; };
 		6E0CB48F2195D9CE00B6C90A /* ARPlacementObject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */; };
 		6E0CB4912196C0D600B6C90A /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB4902196C0D600B6C90A /* StatusViewController.swift */; };
@@ -50,9 +43,18 @@
 		CC10CBB421965B62001DB120 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB321965B62001DB120 /* BaseView.swift */; };
 		CC10CBB62196C385001DB120 /* UIViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB52196C385001DB120 /* UIViewUtils.swift */; };
 		CC10CBB8219718A4001DB120 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB7219718A4001DB120 /* ColorUtils.swift */; };
+		CC10CBBB21972D79001DB120 /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBBA21972D79001DB120 /* SettingsScreenViewController.swift */; };
+		CC10CBBD21972D96001DB120 /* SettingsScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC10CBBC21972D96001DB120 /* SettingsScreenView.storyboard */; };
 		CC56EEB72195D37E00EA9EE9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */; };
 		CC56EEB92195D38D00EA9EE9 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */; };
 		CC56EEBB2195DFD500EA9EE9 /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */; };
+		F466925C54A5EE5398D8A8AC /* TableViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46692FB653880B2B94810BB /* TableViewUtils.swift */; };
+		F466930649D311D43CB64503 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669BADCD098F28B9034EAF /* ImageUtils.swift */; };
+		F4669344C7F8B5A4FAEA94DC /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F466992334BD048DDD29D9BF /* ProfileHeaderCell.swift */; };
+		F4669454E12C1D1900890FEB /* CollectionViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46694D4A06671DC9E1F1872 /* CollectionViewUtils.swift */; };
+		F466948594E66FCF469EE50D /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669C3BCCE1BECBC4A15356 /* ColorUtils.swift */; };
+		F46699CD5999FBF176D8B765 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669AE17D2601BA0D12CF8F /* BaseCollectionViewCell.swift */; };
+		F4669EB67289415DAC5A1553 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669E10CC48746278540913 /* BaseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,12 +66,6 @@
 		3613290A2195AE5700C22703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3613290D2195AE5700C22703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3613290F2195AE5700C22703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObjectPlacementViewController.swift; sourceTree = "<group>"; };
-		6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARPlacementObject.storyboard; sourceTree = "<group>"; };
-		6E0CB4902196C0D600B6C90A /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
-		6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObject3DViewController.swift; sourceTree = "<group>"; };
-		6E0CB4942196E4F300B6C90A /* ARObject3DViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARObject3DViewController.storyboard; sourceTree = "<group>"; };
-		6E0CB4B72196E94200B6C90A /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		361329172195D3D400C22703 /* ARMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMapViewController.swift; sourceTree = "<group>"; };
 		3613291B2195D59E00C22703 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		3613291C2195D59E00C22703 /* SceneLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationView.swift; sourceTree = "<group>"; };
@@ -85,6 +81,12 @@
 		361329352197017B00C22703 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		361329372197018800C22703 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		361329392197042700C22703 /* ProfileHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderCell.xib; sourceTree = "<group>"; };
+		6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObjectPlacementViewController.swift; sourceTree = "<group>"; };
+		6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARPlacementObject.storyboard; sourceTree = "<group>"; };
+		6E0CB4902196C0D600B6C90A /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObject3DViewController.swift; sourceTree = "<group>"; };
+		6E0CB4942196E4F300B6C90A /* ARObject3DViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARObject3DViewController.storyboard; sourceTree = "<group>"; };
+		6E0CB4B72196E94200B6C90A /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		C1B81B9F12C2C28645D866C7 /* Pods-Grafficity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grafficity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grafficity/Pods-Grafficity.debug.xcconfig"; sourceTree = "<group>"; };
 		CC10CBA6219608C1001DB120 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		CC10CBA82196302A001DB120 /* GraffityRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraffityRecord.swift; sourceTree = "<group>"; };
@@ -95,6 +97,8 @@
 		CC10CBB321965B62001DB120 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		CC10CBB52196C385001DB120 /* UIViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtils.swift; sourceTree = "<group>"; };
 		CC10CBB7219718A4001DB120 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		CC10CBBA21972D79001DB120 /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
+		CC10CBBC21972D96001DB120 /* SettingsScreenView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsScreenView.storyboard; sourceTree = "<group>"; };
 		CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MapStyle.json; sourceTree = "<group>"; };
@@ -163,16 +167,10 @@
 			path = grafficity;
 			sourceTree = "<group>";
 		};
-		6E0CB4962196E8BC00B6C90A /* Scenes objects */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Scenes objects";
-			sourceTree = "<group>";
-		};
 		361329152195D2E400C22703 /* view_controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CC10CBB921972C74001DB120 /* settings */,
 				361329342197016600C22703 /* ProfileScreen */,
 				3613292F2196E62C00C22703 /* MainScreen */,
 				361329162195D3B600C22703 /* ARMap */,
@@ -237,6 +235,13 @@
 			path = ProfileScreen;
 			sourceTree = "<group>";
 		};
+		6E0CB4962196E8BC00B6C90A /* Scenes objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Scenes objects";
+			sourceTree = "<group>";
+		};
 		8D76646A2AF0BA911399190F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +268,15 @@
 				CC10CBAD21963409001DB120 /* ModelGenerator.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		CC10CBB921972C74001DB120 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				CC10CBBA21972D79001DB120 /* SettingsScreenViewController.swift */,
+				CC10CBBC21972D96001DB120 /* SettingsScreenView.storyboard */,
+			);
+			path = settings;
 			sourceTree = "<group>";
 		};
 		CC56EEB52195CF2700EA9EE9 /* map */ = {
@@ -356,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC10CBBD21972D96001DB120 /* SettingsScreenView.storyboard in Resources */,
 				CC10CBB021965909001DB120 /* PreviewMarker.xib in Resources */,
 				3613290E2195AE5700C22703 /* LaunchScreen.storyboard in Resources */,
 				6E0CB4B82196E94200B6C90A /* art.scnassets in Resources */,
@@ -427,6 +442,7 @@
 				3613292A2195D59E00C22703 /* SCNNode+Extensions.swift in Sources */,
 				361329382197018800C22703 /* ProfileViewController.swift in Sources */,
 				CC10CBB62196C385001DB120 /* UIViewUtils.swift in Sources */,
+				CC10CBBB21972D79001DB120 /* SettingsScreenViewController.swift in Sources */,
 				361329062195AE5500C22703 /* ViewController.swift in Sources */,
 				CC10CBAC21963161001DB120 /* ArtistRecord.swift in Sources */,
 				CC10CBB221965921001DB120 /* PreviewMarker.swift in Sources */,
