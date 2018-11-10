@@ -60,6 +60,16 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
     public private(set) var locationNodes = [LocationNode]()
 
     private var sceneLocationEstimates = [SceneLocationEstimate]()
+    
+    
+    var counter = 0
+    
+    var imageNode: SCNNode?
+    var objectNode: SCNNode?
+    var objectAnchor: ARAnchor?
+    var detectedPlanes: [String: SCNNode] = [:]
+    var placementOrientation: ARPlaneAnchor.Alignment = .horizontal
+    var bananaScene = SCNScene(named: "art.scnassets/banana.scn")
 
     public private(set) var sceneNode: SCNNode? {
         didSet {
@@ -123,9 +133,12 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
     }
 
     public func run() {
+        
+        addGestureRecognizer()
         // Create a session configuration
 		let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
+        configuration.planeDetection = [.horizontal, .vertical]
+        configuration.worldAlignment = .gravityAndHeading
 
         if orientToTrueNorth {
             configuration.worldAlignment = .gravityAndHeading
@@ -144,6 +157,79 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
         session.pause()
         updateEstimatesTimer?.invalidate()
         updateEstimatesTimer = nil
+    }
+    
+    
+    func addGestureRecognizer() {
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(onTapAction))
+        
+        addGestureRecognizer(tap)
+    }
+    
+    @objc func onTapAction(_ sender: UITapGestureRecognizer) {
+        let location = sender.location(in: self)
+        
+        guard let firstHitResult = hitTest(location, types: .existingPlaneUsingExtent).first,
+            let anchor = firstHitResult.anchor as? ARPlaneAnchor else { return }
+        
+        placementOrientation = anchor.alignment
+        
+        if placementOrientation == .vertical {
+            
+            if imageNode == nil, let planeNode = detectedPlanes[anchor.identifier.uuidString],
+                let image = UIImage(named: "testImage") {
+                
+                let imagePlane = SCNPlane(width: 0.7, height: 0.7 * image.size.height / image.size.width)
+                imagePlane.firstMaterial?.isDoubleSided = true
+                imagePlane.materials.first?.diffuse.contents = image
+                
+                let imageNode = SCNNode(geometry: imagePlane)
+                
+                imageNode.name = "Main"
+                
+                let translation = firstHitResult.worldTransform.translation
+                
+                imageNode.position = SCNVector3(translation.x, translation.y, translation.z)
+                imageNode.eulerAngles.x = -.pi / 2
+                imageNode.worldOrientation = planeNode.worldOrientation
+                
+                if placementOrientation == .horizontal {
+                    
+                    let cameraDirection = session.currentFrame?.camera.eulerAngles.y
+                    imageNode.eulerAngles.y = cameraDirection ?? 0
+                }
+                
+                scene.rootNode.addChildNode(imageNode)
+                
+                self.imageNode = imageNode
+            } else {
+                
+                imageNode?.removeFromParentNode()
+                imageNode = nil
+            }
+        } else {
+            
+            if objectAnchor == nil, let hitTestResult = hitTest(location, types: [.featurePoint, .estimatedHorizontalPlane]).first {
+                
+                let anchor = ARAnchor(transform: hitTestResult.worldTransform)
+                objectAnchor = anchor
+                session.add(anchor: anchor)
+            } else {
+                
+                session.remove(anchor: anchor)
+            }
+        }
+    }
+    
+    func addBodrov(x: Float, y: Float, z: Float) {
+        
+        
+    }
+    
+    func addBanana(x: Float, y: Float, z: Float) {
+        
+        
     }
 
     @objc private func updateLocationData() {
@@ -491,7 +577,75 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
     }
 
     // MARK: - ARSCNViewDelegate
-
+    
+    public func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        
+        if !(anchor is ARPlaneAnchor),
+            let bananaNode = bananaScene?.rootNode.childNode(withName: "banana_001", recursively: true) {
+            
+            let position = anchor.transform.translation
+            bananaNode.scale = SCNVector3(0.3, 0.3, 0.3)
+            bananaNode.position = SCNVector3(position.x, position.y + 1, position.z)
+            bananaNode.eulerAngles.z = .pi / 2
+            objectNode = bananaNode
+            node.addChildNode(bananaNode)
+        }
+        
+        if let planeAnchor = anchor as? ARPlaneAnchor {
+            
+            let width = CGFloat(planeAnchor.extent.x)
+            let height = CGFloat(planeAnchor.extent.z)
+            let plane = SCNPlane(width: width, height: height)
+            plane.materials.first?.diffuse.contents = UIColor.orange
+            
+            let planeNode = SCNNode(geometry: plane)
+            planeNode.name = "Optional"
+            planeNode.opacity = 0
+            
+            let x = CGFloat(planeAnchor.center.x)
+            let y = CGFloat(planeAnchor.center.y)
+            let z = CGFloat(planeAnchor.center.z)
+            
+            planeNode.position = SCNVector3(x,y,z)
+            planeNode.eulerAngles.x = -.pi / 2
+            
+            node.addChildNode(planeNode)
+            
+            detectedPlanes[planeAnchor.identifier.uuidString] = planeNode
+        }
+    }
+    
+    public func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        
+        guard let planeAnchor = anchor as?  ARPlaneAnchor,
+            let planeNode = detectedPlanes[planeAnchor.identifier.uuidString],
+            let plane = planeNode.geometry as? SCNPlane
+            else { return }
+        
+        
+        let width = CGFloat(planeAnchor.extent.x)
+        let height = CGFloat(planeAnchor.extent.z)
+        plane.width = width
+        plane.height = height
+        
+        
+        let x = CGFloat(planeAnchor.center.x)
+        let y = CGFloat(planeAnchor.center.y)
+        let z = CGFloat(planeAnchor.center.z)
+        planeNode.position = SCNVector3(x, y, z)
+    }
+    
+    public func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
+        
+        if objectNode != nil {
+            objectAnchor = nil
+            objectNode?.removeFromParentNode()
+            objectNode = nil
+            bananaScene = SCNScene(named: "art.scnassets/banana.scn")
+        }
+    }
+    
+    
     public func renderer(_ renderer: SCNSceneRenderer, didRenderScene scene: SCNScene, atTime time: TimeInterval) {
         if sceneNode == nil {
             sceneNode = SCNNode()
