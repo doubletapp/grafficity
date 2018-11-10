@@ -43,6 +43,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         initializeLocation()
+        seedMarkers()
     }
     
     
@@ -82,6 +83,29 @@ class MapViewController: UIViewController {
         searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         definesPresentationContext = true
+    }
+    
+    private func seedMarkers() {
+        mapView.clear()
+        let records = ModelGenerator.generateGraffities()
+        for record in records {
+        	let marker = GMSMarker(position: record.location!)
+            marker.title = record.name
+            marker.map = mapView
+            if record.rating < 0.5 {
+                marker.icon = UIImage(named: "mapPin")
+            } else {
+                let icon = UIImage.getPreviewMarker(
+                    	with: record.preview,
+                        size: CGFloat(36 + (record.rating - 0.5) * 44))
+                let previewMarker = PreviewMarker(frame: CGRect(
+                    origin: .zero,
+                    size: CGSize(width: icon!.size.width, height: icon!.size.height + 24)
+                ))
+                previewMarker.preview.image = icon
+                marker.iconView = previewMarker
+            }
+        }
     }
     
     private func moveCamera(to location: CLLocationCoordinate2D) {

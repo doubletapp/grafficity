@@ -14,6 +14,12 @@
 		3613290E2195AE5700C22703 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3613290C2195AE5700C22703 /* LaunchScreen.storyboard */; };
 		388F6888A1F834ACF29DAFA3 /* Pods_Grafficity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */; };
 		CC10CBA7219608C1001DB120 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBA6219608C1001DB120 /* ImageUtils.swift */; };
+		CC10CBA92196302A001DB120 /* GraffityRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBA82196302A001DB120 /* GraffityRecord.swift */; };
+		CC10CBAC21963161001DB120 /* ArtistRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBAB21963161001DB120 /* ArtistRecord.swift */; };
+		CC10CBAE21963409001DB120 /* ModelGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBAD21963409001DB120 /* ModelGenerator.swift */; };
+		CC10CBB021965909001DB120 /* PreviewMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC10CBAF21965909001DB120 /* PreviewMarker.xib */; };
+		CC10CBB221965921001DB120 /* PreviewMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB121965921001DB120 /* PreviewMarker.swift */; };
+		CC10CBB421965B62001DB120 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB321965B62001DB120 /* BaseView.swift */; };
 		CC56EEB72195D37E00EA9EE9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */; };
 		CC56EEB92195D38D00EA9EE9 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */; };
 		CC56EEBB2195DFD500EA9EE9 /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */; };
@@ -30,6 +36,12 @@
 		3613290F2195AE5700C22703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1B81B9F12C2C28645D866C7 /* Pods-Grafficity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grafficity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grafficity/Pods-Grafficity.debug.xcconfig"; sourceTree = "<group>"; };
 		CC10CBA6219608C1001DB120 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		CC10CBA82196302A001DB120 /* GraffityRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraffityRecord.swift; sourceTree = "<group>"; };
+		CC10CBAB21963161001DB120 /* ArtistRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRecord.swift; sourceTree = "<group>"; };
+		CC10CBAD21963409001DB120 /* ModelGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGenerator.swift; sourceTree = "<group>"; };
+		CC10CBAF21965909001DB120 /* PreviewMarker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewMarker.xib; sourceTree = "<group>"; };
+		CC10CBB121965921001DB120 /* PreviewMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMarker.swift; sourceTree = "<group>"; };
+		CC10CBB321965B62001DB120 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MapStyle.json; sourceTree = "<group>"; };
@@ -69,6 +81,7 @@
 		361329022195AE5500C22703 /* grafficity */ = {
 			isa = PBXGroup;
 			children = (
+				CC10CBAA2196313F001DB120 /* model */,
 				CC10CBA5219608B1001DB120 /* utils */,
 				CC56EEB52195CF2700EA9EE9 /* map */,
 				361329032195AE5500C22703 /* AppDelegate.swift */,
@@ -97,12 +110,25 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		CC10CBAA2196313F001DB120 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CC10CBA82196302A001DB120 /* GraffityRecord.swift */,
+				CC10CBAB21963161001DB120 /* ArtistRecord.swift */,
+				CC10CBAD21963409001DB120 /* ModelGenerator.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		CC56EEB52195CF2700EA9EE9 /* map */ = {
 			isa = PBXGroup;
 			children = (
 				CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */,
 				CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */,
 				CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */,
+				CC10CBAF21965909001DB120 /* PreviewMarker.xib */,
+				CC10CBB121965921001DB120 /* PreviewMarker.swift */,
+				CC10CBB321965B62001DB120 /* BaseView.swift */,
 			);
 			path = map;
 			sourceTree = "<group>";
@@ -176,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC10CBB021965909001DB120 /* PreviewMarker.xib in Resources */,
 				3613290E2195AE5700C22703 /* LaunchScreen.storyboard in Resources */,
 				CC56EEBB2195DFD500EA9EE9 /* MapStyle.json in Resources */,
 				3613290B2195AE5700C22703 /* Assets.xcassets in Resources */,
@@ -231,9 +258,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				361329062195AE5500C22703 /* ViewController.swift in Sources */,
+				CC10CBAC21963161001DB120 /* ArtistRecord.swift in Sources */,
+				CC10CBB221965921001DB120 /* PreviewMarker.swift in Sources */,
 				CC56EEB72195D37E00EA9EE9 /* MapViewController.swift in Sources */,
 				CC10CBA7219608C1001DB120 /* ImageUtils.swift in Sources */,
 				361329042195AE5500C22703 /* AppDelegate.swift in Sources */,
+				CC10CBB421965B62001DB120 /* BaseView.swift in Sources */,
+				CC10CBAE21963409001DB120 /* ModelGenerator.swift in Sources */,
+				CC10CBA92196302A001DB120 /* GraffityRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
