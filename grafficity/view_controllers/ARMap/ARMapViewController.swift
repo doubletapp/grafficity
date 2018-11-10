@@ -29,6 +29,9 @@ class ARMapViewController: UIViewController {
 
     var adjustNorthByTappingSidesOfScreen = false
 
+    let objectInfoView = ARPreviewMarker()
+    let closeButton = UIButton(type: .custom)
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,7 +39,7 @@ class ARMapViewController: UIViewController {
         infoLabel.textAlignment = .left
         infoLabel.textColor = UIColor.white
         infoLabel.numberOfLines = 0
-        sceneLocationView.addSubview(infoLabel)
+//        sceneLocationView.addSubview(infoLabel)
 
         updateInfoLabelTimer = Timer.scheduledTimer(
                 timeInterval: 0.1,
@@ -76,6 +79,9 @@ class ARMapViewController: UIViewController {
         }
 
         view.backgroundColor = .white
+
+        addObjectInfoView()
+        addCloseButton()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -90,6 +96,67 @@ class ARMapViewController: UIViewController {
         print("pause")
         // Pause the view's session
         sceneLocationView.pause()
+    }
+
+    var bottomPreviewConstraint: NSLayoutConstraint?
+
+    func addCloseButton() {
+        view.addSubview(closeButton)
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        closeButton.setImage(UIImage(named: "icon_close_20"), for: .normal)
+        closeButton.addTarget(self, action: #selector(closeScreen), for: .touchUpInside)
+        closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        closeButton.widthAnchor.constraint(equalToConstant: 46).isActive = true
+        closeButton.heightAnchor.constraint(equalToConstant: 46).isActive = true
+    }
+
+    @objc func closeScreen() {
+        dismiss(animated: true)
+    }
+    
+    func addObjectInfoView() {
+        objectInfoView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(objectInfoView)
+
+        bottomPreviewConstraint = objectInfoView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+        bottomPreviewConstraint?.isActive = true
+        objectInfoView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        objectInfoView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    }
+
+    func showMarkerPreview() {
+        view.setNeedsLayout()
+        view.layoutIfNeeded()
+
+        UIView.animate(
+                withDuration: 0.25,
+                animations: { [weak self] in
+                    guard let sself = self else { return }
+
+                    sself.bottomPreviewConstraint?.constant = -sself.objectInfoView.frame.height
+                    
+                    sself.view.setNeedsLayout()
+                    sself.view.layoutIfNeeded()
+                }
+        )
+    }
+    
+    func hideMarkerPreview() {
+        view.setNeedsLayout()
+        view.layoutIfNeeded()
+        
+        UIView.animate(
+            withDuration: 0.25,
+            animations: { [weak self] in
+                guard let sself = self else { return }
+                
+                sself.bottomPreviewConstraint?.constant = 0
+                
+                sself.view.setNeedsLayout()
+                sself.view.layoutIfNeeded()
+            }
+        )
     }
 
     override func viewDidLayoutSubviews() {
@@ -269,6 +336,14 @@ extension ARMapViewController: SceneLocationViewDelegate {
 
     func sceneLocationViewDidUpdateLocationAndScaleOfLocationNode(sceneLocationView: SceneLocationView, locationNode: LocationNode) {
 
+    }
+
+    public func showPreview() {
+        showMarkerPreview()
+    }
+    
+    public func hidePreview() {
+        hideMarkerPreview()
     }
 }
 
