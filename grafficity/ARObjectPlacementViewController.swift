@@ -21,6 +21,20 @@ class ARObjectPlacementViewController: UIViewController {
     var trackedNode: SCNNode?
     var localCoordinates: SCNVector3?
     
+    lazy var statusViewController: StatusViewController = {
+        return children.lazy.compactMap({ $0 as? StatusViewController }).first!
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        statusViewController.restartExperienceHandler = { [unowned self] in
+            self.statusViewController.cancelAllScheduledMessages()
+            self.configureSession()
+            self.statusViewController.scheduleMessage("НАВЕДИТЕСЬ НА ПОВЕРХНОСТЬ ДЛЯ РАСПОЛОЖЕНИЯ РИСУНКА", inSeconds: 7.5, messageType: .planeEstimation)
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -39,7 +53,7 @@ class ARObjectPlacementViewController: UIViewController {
     }
 }
 
-extension ARObjectPlacementViewController: ARSCNViewDelegate {
+extension ARObjectPlacementViewController: ARSCNViewDelegate, ARSessionDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         
@@ -85,18 +99,47 @@ extension ARObjectPlacementViewController: ARSCNViewDelegate {
         let z = CGFloat(planeAnchor.center.z)
         planeNode.position = SCNVector3(x, y, z)
     }
+    
+    func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
+        statusViewController.showTrackingQualityInfo(for: camera.trackingState, autoHide: true)
+        
+        switch camera.trackingState {
+        case .notAvailable, .limited:
+            statusViewController.escalateFeedback(for: camera.trackingState, inSeconds: 3.0)
+        case .normal:
+            statusViewController.cancelScheduledMessage(for: .trackingStateEscalation)
+            
+        }
+    }
+    
+    func session(_ session: ARSession, didFailWithError error: Error) {
+        guard error is ARError else { return }
+        
+        let errorWithInfo = error as NSError
+        let messages = [
+            errorWithInfo.localizedDescription,
+            errorWithInfo.localizedFailureReason,
+            errorWithInfo.localizedRecoverySuggestion
+        ]
+        
+        let errorMessage = messages.compactMap({ $0 }).joined(separator: "\n")
+        
+        DispatchQueue.main.async {
+            self.displayErrorMessage(title: "Сбой сессии дополненной реальности", message: errorMessage)
+        }
+    }
 }
 
 extension ARObjectPlacementViewController: UIGestureRecognizerDelegate {
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         
-        if gestureRecognizer is UIPinchGestureRecognizer || gestureRecognizer is UIRotationGestureRecognizer {
-            return true
-        }
-        
         if gestureRecognizer is UIPanGestureRecognizer || otherGestureRecognizer is UIPanGestureRecognizer {
             return false
+        }
+        
+        if gestureRecognizer is UIPinchGestureRecognizer || gestureRecognizer is UIRotationGestureRecognizer {
+            return true
         }
         
         return false
@@ -107,10 +150,14 @@ extension ARObjectPlacementViewController {
     
     private func configureSession() {
         
+        imageNode?.removeFromParentNode()
+        imageNode = nil
+        
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = [.horizontal, .vertical]
         
         sceneView.delegate = self
+        sceneView.session.delegate = self
         sceneView.session.run(configuration)
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
         sceneView.scene.rootNode.name = "ROOT NODE"
@@ -138,6 +185,19 @@ extension ARObjectPlacementViewController {
         sceneView.addGestureRecognizer(move)
     }
     
+    private func displayErrorMessage(title: String, message: String) {
+        
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let restartAction = UIAlertAction(title: "Перезапустить сессию", style: .default) { [weak self] _ in
+            alertController.dismiss(animated: true, completion: nil)
+            self?.configureSession()
+            self?.statusViewController.scheduleMessage("НАВЕДИТЕСЬ НА ПОВЕРХНОСТЬ ДЛЯ РАСПОЛОЖЕНИЯ РИСУНКА", inSeconds: 7.5, messageType: .planeEstimation)
+        }
+        alertController.addAction(restartAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     @objc private func onPanAction(_ sender: UIPanGestureRecognizer) {
         guard imageNode != nil else { return }
         
@@ -153,13 +213,16 @@ extension ARObjectPlacementViewController {
                 let anchor = result.anchor as? ARPlaneAnchor, let planeNode = detectedPlanes[anchor.identifier.uuidString] else { return }
             let resultTransform = result.worldTransform
             
-            object.eulerAngles.x = -.pi / 2
-            object.worldOrientation = planeNode.worldOrientation
-            
-            if anchor.alignment == .horizontal {
+            if placementOrientation != anchor.alignment {
                 
-                let cameraDirection = sceneView.session.currentFrame?.camera.eulerAngles.y
-                object.eulerAngles.y = cameraDirection ?? 0
+                object.eulerAngles.x = -.pi / 2
+                object.worldOrientation = planeNode.worldOrientation
+                
+                if anchor.alignment == .horizontal {
+                    
+                    let cameraDirection = sceneView.session.currentFrame?.camera.eulerAngles.y
+                    object.eulerAngles.y = cameraDirection ?? 0
+                }
             }
             
 
@@ -201,14 +264,17 @@ extension ARObjectPlacementViewController {
         if currentState == .start {
             
             if imageNode == nil, let hitTestResult = sceneView.hitTest(location, types: .existingPlaneUsingExtent).first,
-                let anchor = hitTestResult.anchor as? ARPlaneAnchor, let planeNode = detectedPlanes[anchor.identifier.uuidString] {
+                let anchor = hitTestResult.anchor as? ARPlaneAnchor, let planeNode = detectedPlanes[anchor.identifier.uuidString],
+                let image = sourceImage {
                 
                 placementOrientation = anchor.alignment
                 
-                let imagePlane = SCNPlane(width: 0.4, height: 0.4)
+                let imagePlane = SCNPlane(width: 0.4, height: 0.4 * image.size.height / image.size.width)
+                imagePlane.firstMaterial?.isDoubleSided = true
                 imagePlane.materials.first?.diffuse.contents = sourceImage
                 
                 let imageNode = SCNNode(geometry: imagePlane)
+                
                 imageNode.name = "Main"
                 
                 let translation = hitTestResult.worldTransform.translation

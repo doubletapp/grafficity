@@ -15,6 +15,7 @@
 		388F6888A1F834ACF29DAFA3 /* Pods_Grafficity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */; };
 		6E0CB48D2195D3CB00B6C90A /* ARObjectPlacementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */; };
 		6E0CB48F2195D9CE00B6C90A /* ARPlacementObject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */; };
+		6E0CB4912196C0D600B6C90A /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB4902196C0D600B6C90A /* StatusViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3613290F2195AE5700C22703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObjectPlacementViewController.swift; sourceTree = "<group>"; };
 		6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARPlacementObject.storyboard; sourceTree = "<group>"; };
+		6E0CB4902196C0D600B6C90A /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		C1B81B9F12C2C28645D866C7 /* Pods-Grafficity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grafficity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grafficity/Pods-Grafficity.debug.xcconfig"; sourceTree = "<group>"; };
 		EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grafficity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 				361329032195AE5500C22703 /* AppDelegate.swift */,
 				361329052195AE5500C22703 /* ViewController.swift */,
 				6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */,
+				6E0CB4902196C0D600B6C90A /* StatusViewController.swift */,
 				361329072195AE5500C22703 /* Main.storyboard */,
 				6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */,
 				3613290A2195AE5700C22703 /* Assets.xcassets */,
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E0CB4912196C0D600B6C90A /* StatusViewController.swift in Sources */,
 				6E0CB48D2195D3CB00B6C90A /* ARObjectPlacementViewController.swift in Sources */,
 				361329062195AE5500C22703 /* ViewController.swift in Sources */,
 				361329042195AE5500C22703 /* AppDelegate.swift in Sources */,
