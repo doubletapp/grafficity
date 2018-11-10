@@ -20,12 +20,25 @@ class MainViewController: UITabBarController {
         addViewController.tabBarItem.isEnabled = false
 
         addCentralButton()
+        customizeTabBar()
+        
+        viewControllers = [mapViewController, feedViewController, addViewController, profileViewController, settingsViewController]
+    }
 
+    func customizeTabBar() {
         tabBar.tintColor = UIColor(netHex: 0xe04a3d)
         tabBar.barTintColor = .white
         tabBar.backgroundColor = .white
+        tabBar.setValue(true, forKey: "_hidesShadow")
 
-        viewControllers = [mapViewController, feedViewController, addViewController, profileViewController, settingsViewController]
+        tabBar.shadowImage = UIImage()
+        tabBar.backgroundImage = UIImage()
+
+        tabBar.layer.masksToBounds = false;
+        tabBar.layer.shadowRadius = 9
+        tabBar.layer.shadowOpacity = 0.1
+        tabBar.layer.shadowColor = UIColor.black.cgColor
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
     }
 
     private func addCentralButton() {
