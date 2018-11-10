@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JaV-NU-ibF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Object Placement View Controller-->
+        <scene sceneID="E2C-Ye-Qcs">
+            <objects>
+                <viewController id="JaV-NU-ibF" customClass="ARObjectPlacementViewController" customModule="Grafficity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pbX-LI-XQj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2op-8i-htG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSs-69-ouJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="kfd-7P-BPy"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="gBJ-dx-os3" kind="embed" id="CKE-BV-s6d"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xBU-0S-6jj" firstAttribute="trailing" secondItem="2op-8i-htG" secondAttribute="trailing" id="BAd-Ps-b4L"/>
+                            <constraint firstItem="2op-8i-htG" firstAttribute="leading" secondItem="xBU-0S-6jj" secondAttribute="leading" id="HhO-5U-cbV"/>
+                            <constraint firstItem="bSs-69-ouJ" firstAttribute="top" secondItem="xBU-0S-6jj" secondAttribute="top" id="I3v-ea-ccz"/>
+                            <constraint firstItem="xBU-0S-6jj" firstAttribute="trailing" secondItem="bSs-69-ouJ" secondAttribute="trailing" id="MTp-2o-lU2"/>
+                            <constraint firstItem="2op-8i-htG" firstAttribute="top" secondItem="pbX-LI-XQj" secondAttribute="top" id="XQl-k6-MlE"/>
+                            <constraint firstItem="bSs-69-ouJ" firstAttribute="leading" secondItem="xBU-0S-6jj" secondAttribute="leading" id="uj3-q6-PHe"/>
+                            <constraint firstAttribute="bottom" secondItem="2op-8i-htG" secondAttribute="bottom" id="wQM-Vk-Mev"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xBU-0S-6jj"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="2op-8i-htG" id="zYn-s4-Wpi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwC-nL-4jA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="238" y="-95"/>
+        </scene>
+        <!--Status View Controller-->
+        <scene sceneID="N1L-R6-TWl">
+            <objects>
+                <viewController id="gBJ-dx-os3" customClass="StatusViewController" customModule="Grafficity" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ath-SN-Yx3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="aHc-cX-Aja" userLabel="Message Panel">
+                                <rect key="frame" x="16" y="20" width="125" height="32"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FCQ-Z0-9zX">
+                                    <rect key="frame" x="0.0" y="0.0" width="125" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3c-TD-3ly">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="32"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qap-rp-hh8">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" text="Tracking status" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPG-gV-0Rs" userLabel="Messages label">
+                                                        <rect key="frame" x="16" y="8" width="93" height="16"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                        <nil key="textColor"/>
+                                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="sPG-gV-0Rs" firstAttribute="centerY" secondItem="qap-rp-hh8" secondAttribute="centerY" id="6Ux-mj-kUD"/>
+                                                    <constraint firstItem="sPG-gV-0Rs" firstAttribute="leading" secondItem="qap-rp-hh8" secondAttribute="leading" constant="16" id="Oxc-Gd-5mk"/>
+                                                    <constraint firstItem="sPG-gV-0Rs" firstAttribute="top" secondItem="qap-rp-hh8" secondAttribute="top" constant="8" id="QPc-rO-hZ7"/>
+                                                    <constraint firstItem="sPG-gV-0Rs" firstAttribute="trailing" secondItem="qap-rp-hh8" secondAttribute="trailing" constant="-16" id="gNt-Eq-jB0"/>
+                                                </constraints>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="extraLight"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="f3c-TD-3ly" firstAttribute="top" secondItem="FCQ-Z0-9zX" secondAttribute="top" id="Egl-W3-eL3"/>
+                                        <constraint firstAttribute="trailing" secondItem="f3c-TD-3ly" secondAttribute="trailing" id="MXS-sn-Hid"/>
+                                        <constraint firstItem="f3c-TD-3ly" firstAttribute="leading" secondItem="FCQ-Z0-9zX" secondAttribute="leading" id="aN4-Bp-Tvy"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="sPG-gV-0Rs" secondAttribute="bottom" constant="8" id="Xhk-GN-6lm"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ur-KG-yuJ" userLabel="Restart Experience Button Icon">
+                                <rect key="frame" x="331" y="0.0" width="44" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="d80-yC-y6I"/>
+                                    <constraint firstAttribute="width" constant="44" id="zuS-VN-K67"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="12"/>
+                                <state key="normal" image="restart"/>
+                                <state key="selected" image="restartPressed"/>
+                                <state key="highlighted" image="restartPressed"/>
+                                <connections>
+                                    <action selector="restartExperience:" destination="gBJ-dx-os3" eventType="touchUpInside" id="Xg8-E7-cGb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0W7-Ku-axW" firstAttribute="trailing" secondItem="5ur-KG-yuJ" secondAttribute="trailing" id="4OG-LC-WcE"/>
+                            <constraint firstItem="5ur-KG-yuJ" firstAttribute="top" secondItem="0W7-Ku-axW" secondAttribute="top" id="Qq8-X8-k8l"/>
+                            <constraint firstItem="5ur-KG-yuJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aHc-cX-Aja" secondAttribute="trailing" constant="8" id="YrW-uS-WvG"/>
+                            <constraint firstItem="aHc-cX-Aja" firstAttribute="top" secondItem="5ur-KG-yuJ" secondAttribute="top" constant="20" id="wJ0-Qi-pGV"/>
+                            <constraint firstItem="aHc-cX-Aja" firstAttribute="leading" secondItem="0W7-Ku-axW" secondAttribute="leading" constant="16" id="xbU-TM-6tD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0W7-Ku-axW"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="100"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="sPG-gV-0Rs" id="58Z-Br-cgC"/>
+                        <outlet property="messagePanel" destination="aHc-cX-Aja" id="M97-7f-3uR"/>
+                        <outlet property="restartExperienceButton" destination="5ur-KG-yuJ" id="r2l-CY-WRx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JbZ-kd-4Mb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018" y="-351"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="restart" width="20" height="23"/>
+        <image name="restartPressed" width="20" height="23"/>
+    </resources>
+</document>
