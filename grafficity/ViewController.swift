@@ -18,14 +18,20 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        DispatchQueue.main.async { [weak self] in
-            let arPlacementStoryboard = UIStoryboard(name: "ARPlacementObject", bundle: Bundle.main)
+//        DispatchQueue.main.async { [weak self] in
+//            let arPlacementStoryboard = UIStoryboard(name: "ARPlacementObject", bundle: Bundle.main)
+//
+//            if let vc = arPlacementStoryboard.instantiateInitialViewController() as? ARObjectPlacementViewController {
+//
+//                vc.sourceImage = UIImage(named: "testImage")
+//                self?.present(vc, animated: true)
+//            }
+//        }
+        
+        let storyBoard = UIStoryboard(name: "ARObject3DViewController", bundle: Bundle.main)
+        if let vc = storyBoard.instantiateInitialViewController() as? ARObject3DViewController {
             
-            if let vc = arPlacementStoryboard.instantiateInitialViewController() as? ARObjectPlacementViewController {
-                
-                vc.sourceImage = UIImage(named: "testImage")
-                self?.present(vc, animated: true)
-            }
+            present(vc, animated: true)
         }
     }
 }

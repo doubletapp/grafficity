@@ -16,6 +16,9 @@
 		6E0CB48D2195D3CB00B6C90A /* ARObjectPlacementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */; };
 		6E0CB48F2195D9CE00B6C90A /* ARPlacementObject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */; };
 		6E0CB4912196C0D600B6C90A /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB4902196C0D600B6C90A /* StatusViewController.swift */; };
+		6E0CB4932196E3E400B6C90A /* ARObject3DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */; };
+		6E0CB4952196E4F300B6C90A /* ARObject3DViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB4942196E4F300B6C90A /* ARObject3DViewController.storyboard */; };
+		6E0CB4B82196E94200B6C90A /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB4B72196E94200B6C90A /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObjectPlacementViewController.swift; sourceTree = "<group>"; };
 		6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARPlacementObject.storyboard; sourceTree = "<group>"; };
 		6E0CB4902196C0D600B6C90A /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObject3DViewController.swift; sourceTree = "<group>"; };
+		6E0CB4942196E4F300B6C90A /* ARObject3DViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARObject3DViewController.storyboard; sourceTree = "<group>"; };
+		6E0CB4B72196E94200B6C90A /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		C1B81B9F12C2C28645D866C7 /* Pods-Grafficity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grafficity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grafficity/Pods-Grafficity.debug.xcconfig"; sourceTree = "<group>"; };
 		EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grafficity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -49,6 +55,7 @@
 		361328F72195AE5400C22703 = {
 			isa = PBXGroup;
 			children = (
+				6E0CB4962196E8BC00B6C90A /* Scenes objects */,
 				361329022195AE5500C22703 /* grafficity */,
 				361329012195AE5500C22703 /* Products */,
 				D6C070E6D3F372A31CDF6F82 /* Pods */,
@@ -69,15 +76,25 @@
 			children = (
 				361329032195AE5500C22703 /* AppDelegate.swift */,
 				361329052195AE5500C22703 /* ViewController.swift */,
+				6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */,
 				6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */,
 				6E0CB4902196C0D600B6C90A /* StatusViewController.swift */,
 				361329072195AE5500C22703 /* Main.storyboard */,
 				6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */,
+				6E0CB4942196E4F300B6C90A /* ARObject3DViewController.storyboard */,
 				3613290A2195AE5700C22703 /* Assets.xcassets */,
+				6E0CB4B72196E94200B6C90A /* art.scnassets */,
 				3613290C2195AE5700C22703 /* LaunchScreen.storyboard */,
 				3613290F2195AE5700C22703 /* Info.plist */,
 			);
 			path = grafficity;
+			sourceTree = "<group>";
+		};
+		6E0CB4962196E8BC00B6C90A /* Scenes objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Scenes objects";
 			sourceTree = "<group>";
 		};
 		8D76646A2AF0BA911399190F /* Frameworks */ = {
@@ -157,6 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3613290E2195AE5700C22703 /* LaunchScreen.storyboard in Resources */,
+				6E0CB4B82196E94200B6C90A /* art.scnassets in Resources */,
+				6E0CB4952196E4F300B6C90A /* ARObject3DViewController.storyboard in Resources */,
 				3613290B2195AE5700C22703 /* Assets.xcassets in Resources */,
 				6E0CB48F2195D9CE00B6C90A /* ARPlacementObject.storyboard in Resources */,
 				361329092195AE5500C22703 /* Main.storyboard in Resources */,
@@ -195,6 +214,7 @@
 				6E0CB48D2195D3CB00B6C90A /* ARObjectPlacementViewController.swift in Sources */,
 				361329062195AE5500C22703 /* ViewController.swift in Sources */,
 				361329042195AE5500C22703 /* AppDelegate.swift in Sources */,
+				6E0CB4932196E3E400B6C90A /* ARObject3DViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

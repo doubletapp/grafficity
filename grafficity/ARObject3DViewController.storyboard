@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FuC-Ng-R7s">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Object3D View Controller-->
+        <scene sceneID="d5I-fb-0aZ">
+            <objects>
+                <viewController id="FuC-Ng-R7s" customClass="ARObject3DViewController" customModule="Grafficity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0wT-QN-vP9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CI-Iy-I9M">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCj-H6-R8g">
+                                <rect key="frame" x="329" y="621" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="jkP-Ym-eLK"/>
+                                    <constraint firstAttribute="width" constant="46" id="ooz-9k-oWX"/>
+                                </constraints>
+                                <state key="normal" title="."/>
+                                <connections>
+                                    <action selector="saveBarButtonItemDidTouch:" destination="FuC-Ng-R7s" eventType="touchUpInside" id="WdG-Y3-Yin"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RMv-8z-6P2" firstAttribute="trailing" secondItem="1CI-Iy-I9M" secondAttribute="trailing" id="0yf-4j-htK"/>
+                            <constraint firstAttribute="bottom" secondItem="1CI-Iy-I9M" secondAttribute="bottom" id="10o-3P-ybI"/>
+                            <constraint firstItem="1CI-Iy-I9M" firstAttribute="leading" secondItem="RMv-8z-6P2" secondAttribute="leading" id="Bhq-TF-hoe"/>
+                            <constraint firstItem="RMv-8z-6P2" firstAttribute="trailing" secondItem="lCj-H6-R8g" secondAttribute="trailing" id="Kg8-Ng-WXe"/>
+                            <constraint firstItem="1CI-Iy-I9M" firstAttribute="top" secondItem="0wT-QN-vP9" secondAttribute="top" id="d2M-p5-nbr"/>
+                            <constraint firstItem="RMv-8z-6P2" firstAttribute="bottom" secondItem="lCj-H6-R8g" secondAttribute="bottom" id="qrX-X8-LV2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RMv-8z-6P2"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="1CI-Iy-I9M" id="GZY-rg-w8U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HAq-BQ-8Wz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="159"/>
+        </scene>
+    </scenes>
+</document>
