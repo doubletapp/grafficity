@@ -11,6 +11,15 @@ class MapViewController: UIViewController {
     @IBOutlet weak var switchModeButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
     
+    @IBOutlet weak var bottomSheetTopOffestConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var bottomPreview: MyImageView!
+    @IBOutlet weak var bottomArtist: UILabel!
+    @IBOutlet weak var bottomGraffity: UILabel!
+    @IBOutlet weak var bottomAddress: UILabel!
+    @IBOutlet weak var bottomDistance: UILabel!
+    
     @IBOutlet weak var searchBar: UISearchBar! {
         didSet {
             searchBar.setImage(UIImage(named: "search"), for: .search, state: .normal)
@@ -25,6 +34,7 @@ class MapViewController: UIViewController {
         didSet {
             mapView.animate(toLocation: initialLocation)
             mapView.isMyLocationEnabled = true
+            mapView.delegate = self
             setupMapStyle(mapView)
         }
     }
@@ -40,6 +50,8 @@ class MapViewController: UIViewController {
             }
         }
     }
+    
+    private var bottomSheetExpanded = false
     
     override func viewDidLoad() {
         initializeLocation()
@@ -100,10 +112,14 @@ class MapViewController: UIViewController {
                         size: CGFloat(36 + (record.rating - 0.5) * 44))
                 let previewMarker = PreviewMarker(frame: CGRect(
                     origin: .zero,
-                    size: CGSize(width: icon!.size.width, height: icon!.size.height + 24)
+                    size: CGSize(width: icon!.size.width, height: icon!.size.height + 22)
                 ))
                 previewMarker.preview.image = icon
                 marker.iconView = previewMarker
+                marker.groundAnchor = CGPoint(
+                    x: 0.5,
+                    y: (icon!.size.height + 11) / (icon!.size.height + 22)
+                )
             }
         }
     }
@@ -165,6 +181,68 @@ extension MapViewController: UISearchBarDelegate {
         UIView.animate(withDuration: 0.25) {
         	self.filterButton.isHidden = false
             self.filterButton.alpha = 1.0
+        }
+    }
+}
+
+extension MapViewController: GMSMapViewDelegate {
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        let camera = GMSCameraPosition.camera(withLatitude: marker.position.latitude, longitude: marker.position.longitude, zoom: 17.0)
+        mapView.animate(to: camera)
+        if !bottomSheetExpanded {
+			showBottomSheet()
+        }
+        return true
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        if bottomSheetExpanded {
+        	hideBottomSheet()
+        }
+    }
+    
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+        if gesture && bottomSheetExpanded {
+        	hideBottomSheet()
+    	}
+    }
+    
+    fileprivate func hideBottomSheet() {
+        bottomSheetExpanded = false
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.view.setNeedsLayout()
+            UIView.animate(withDuration: 0.3) {
+                guard let ss = self else { return }
+                
+                var mapPadding = ss.mapView.padding
+                mapPadding.bottom = 0.0
+                ss.mapView.padding = mapPadding
+                
+                ss.bottomSheetTopOffestConstraint.constant = 0
+                
+                ss.view.setNeedsLayout()
+                ss.view.layoutIfNeeded()
+            }
+        }
+    }
+    
+    private func showBottomSheet() {
+        bottomSheetExpanded = true
+        
+        view.setNeedsLayout()
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            guard let ss = self else { return }
+            
+            var mapPadding = ss.mapView.padding
+            mapPadding.bottom = ss.bottomView.bounds.height
+            ss.mapView.padding = mapPadding
+            
+            ss.bottomSheetTopOffestConstraint.constant = -ss.bottomView.bounds.height
+            
+            ss.view.setNeedsLayout()
+            ss.view.layoutIfNeeded()
         }
     }
 }

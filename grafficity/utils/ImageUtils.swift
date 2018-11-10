@@ -82,4 +82,13 @@ extension UIImage {
     }
 }
 
+class MyImageView: UIImageView {
+    
+    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            clipsToBounds = true
+        }
+    }
+}
 
