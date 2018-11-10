@@ -49,6 +49,8 @@
 		CC10CBB8219718A4001DB120 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB7219718A4001DB120 /* ColorUtils.swift */; };
 		CC10CBBB21972D79001DB120 /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBBA21972D79001DB120 /* SettingsScreenViewController.swift */; };
 		CC10CBBD21972D96001DB120 /* SettingsScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC10CBBC21972D96001DB120 /* SettingsScreenView.storyboard */; };
+		CC10CBC4219771E5001DB120 /* GraffityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBC3219771E5001DB120 /* GraffityViewController.swift */; };
+		CC10CBC621977217001DB120 /* GraffityView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC10CBC521977217001DB120 /* GraffityView.storyboard */; };
 		CC56EEB72195D37E00EA9EE9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */; };
 		CC56EEB92195D38D00EA9EE9 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */; };
 		CC56EEBB2195DFD500EA9EE9 /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */; };
@@ -109,6 +111,8 @@
 		CC10CBB7219718A4001DB120 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		CC10CBBA21972D79001DB120 /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
 		CC10CBBC21972D96001DB120 /* SettingsScreenView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsScreenView.storyboard; sourceTree = "<group>"; };
+		CC10CBC3219771E5001DB120 /* GraffityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraffityViewController.swift; sourceTree = "<group>"; };
+		CC10CBC521977217001DB120 /* GraffityView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GraffityView.storyboard; sourceTree = "<group>"; };
 		CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MapStyle.json; sourceTree = "<group>"; };
@@ -301,9 +305,19 @@
 			path = settings;
 			sourceTree = "<group>";
 		};
+		CC10CBC2219771C6001DB120 /* graffity */ = {
+			isa = PBXGroup;
+			children = (
+				CC10CBC3219771E5001DB120 /* GraffityViewController.swift */,
+				CC10CBC521977217001DB120 /* GraffityView.storyboard */,
+			);
+			path = graffity;
+			sourceTree = "<group>";
+		};
 		CC56EEB52195CF2700EA9EE9 /* map */ = {
 			isa = PBXGroup;
 			children = (
+				CC10CBC2219771C6001DB120 /* graffity */,
 				CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */,
 				CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */,
 				CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */,
@@ -403,6 +417,7 @@
 				6E0CB4952196E4F300B6C90A /* ARObject3DViewController.storyboard in Resources */,
 				CC56EEBB2195DFD500EA9EE9 /* MapStyle.json in Resources */,
 				3613290B2195AE5700C22703 /* Assets.xcassets in Resources */,
+				CC10CBC621977217001DB120 /* GraffityView.storyboard in Resources */,
 				6E0CB48F2195D9CE00B6C90A /* ARPlacementObject.storyboard in Resources */,
 				361329362197017B00C22703 /* Profile.storyboard in Resources */,
 				3613293A2197042700C22703 /* ProfileHeaderCell.xib in Resources */,
@@ -481,6 +496,7 @@
 				361329252195D59E00C22703 /* CGPoint+Extensions.swift in Sources */,
 				361329332196E67600C22703 /* MainViewController.swift in Sources */,
 				361329042195AE5500C22703 /* AppDelegate.swift in Sources */,
+				CC10CBC4219771E5001DB120 /* GraffityViewController.swift in Sources */,
 				CC10CBB421965B62001DB120 /* BaseView.swift in Sources */,
 				CC10CBB8219718A4001DB120 /* ColorUtils.swift in Sources */,
 				CC10CBAE21963409001DB120 /* ModelGenerator.swift in Sources */,
@@ -652,7 +668,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.doubletapp.grafficity.art;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.doubletapp.grafficity.hash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -672,7 +688,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.doubletapp.grafficity.art;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.doubletapp.grafficity.hash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

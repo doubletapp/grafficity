@@ -342,6 +342,10 @@ extension MapViewController: GMSMapViewDelegate {
         guard let graffity = selectedGraffity else {
             return
         }
+        guard let graffityViewController = UIStoryboard(name: "GraffityView", bundle: nil)
+            .instantiateInitialViewController() else { return }
+        
+        self.present(graffityViewController, animated: true)
         print("Open graffiy \(graffity.name)")
     }
 }
