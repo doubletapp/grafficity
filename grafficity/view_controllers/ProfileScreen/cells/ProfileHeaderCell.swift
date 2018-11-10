@@ -21,16 +21,12 @@ class ProfileHeaderCell: UICollectionViewCell {
     }
 
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
-    @IBOutlet weak var filterDateButton: UIButton!
-    @IBOutlet weak var filterPopularityButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
         underlines.forEach { $0.isHidden = true }
         showUnderline(at: 0)
-        setActiveButton(button: filterDateButton)
-        setInactiveButton(button: filterPopularityButton)
     }
 
     @IBAction func didSelectFirstButton() {
@@ -45,34 +41,10 @@ class ProfileHeaderCell: UICollectionViewCell {
         showUnderline(at: 2)
     }
 
-    @IBAction func filterDateAction() {
-        setActiveButton(button: filterDateButton)
-        setInactiveButton(button: filterPopularityButton)
-    }
-
-    @IBAction func filterPopularityAction() {
-        setActiveButton(button: filterPopularityButton)
-        setInactiveButton(button: filterDateButton)
-    }
-
     private func showUnderline(at index: Int) {
         for (i, underline) in underlines.enumerated() {
             underline.isHidden = i != index
         }
-    }
-
-    private func setActiveButton(button: UIButton) {
-        button.backgroundColor = UIColor(netHex: 0xe04a3d)
-        button.layer.cornerRadius = 8
-        button.clipsToBounds = true
-        button.setTitleColor(.white, for: .normal)
-    }
-
-    private func setInactiveButton(button: UIButton) {
-        button.backgroundColor = UIColor(netHex: 0xf5f5f5)
-        button.layer.cornerRadius = 8
-        button.clipsToBounds = true
-        button.setTitleColor(UIColor(netHex: 0x24253d), for: .normal)
     }
 }
 

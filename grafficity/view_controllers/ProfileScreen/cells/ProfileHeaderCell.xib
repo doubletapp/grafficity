@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3o-bv-kDa">
-                        <rect key="frame" x="0.0" y="0.0" width="392" height="275"/>
+                        <rect key="frame" x="0.0" y="0.0" width="392" height="323"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage" translatesAutoresizingMaskIntoConstraints="NO" id="lxT-2z-TKg">
                                 <rect key="frame" x="141.5" y="72" width="109" height="109"/>
@@ -29,13 +29,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Alex D." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8L-wH-B3l">
-                                <rect key="frame" x="166" y="194" width="60" height="24"/>
+                                <rect key="frame" x="166" y="194" width="60" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YHl-Qm-geY">
-                                <rect key="frame" x="0.0" y="227" width="392" height="48"/>
+                                <rect key="frame" x="0.0" y="275" width="392" height="48"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfA-CW-pds">
                                         <rect key="frame" x="0.0" y="0.0" width="130.5" height="48"/>
@@ -152,50 +152,20 @@
                             <constraint firstItem="lxT-2z-TKg" firstAttribute="top" secondItem="i3o-bv-kDa" secondAttribute="top" constant="72" id="zPV-n1-xzG"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZm-dJ-7YH">
-                        <rect key="frame" x="206" y="292" width="166" height="37"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="37" id="fti-lR-wWa"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="По популярности"/>
-                        <connections>
-                            <action selector="filterPopularityAction" destination="CZE-E0-vB4" eventType="touchUpInside" id="lpK-wz-Rkz"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02W-5j-HsA">
-                        <rect key="frame" x="20" y="292" width="166" height="37"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="37" id="dDc-g4-a6Q"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="По дате"/>
-                        <connections>
-                            <action selector="filterDateAction" destination="CZE-E0-vB4" eventType="touchUpInside" id="eQp-yc-Csi"/>
-                        </connections>
-                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="jZm-dJ-7YH" secondAttribute="bottom" constant="14" id="XwO-hn-hXh"/>
-                <constraint firstItem="jZm-dJ-7YH" firstAttribute="leading" secondItem="02W-5j-HsA" secondAttribute="trailing" priority="999" constant="20" id="YiB-zY-08y"/>
-                <constraint firstAttribute="bottom" secondItem="i3o-bv-kDa" secondAttribute="bottom" priority="999" constant="74" id="ZQ5-MU-zph"/>
-                <constraint firstAttribute="trailing" secondItem="jZm-dJ-7YH" secondAttribute="trailing" constant="20" id="a8p-jO-SYk"/>
-                <constraint firstAttribute="bottom" secondItem="02W-5j-HsA" secondAttribute="bottom" constant="14" id="bzq-js-uYH"/>
+                <constraint firstAttribute="bottom" secondItem="i3o-bv-kDa" secondAttribute="bottom" priority="999" constant="20" id="ZQ5-MU-zph"/>
                 <constraint firstAttribute="top" secondItem="i3o-bv-kDa" secondAttribute="top" id="ewH-d5-iKS"/>
                 <constraint firstAttribute="trailing" secondItem="i3o-bv-kDa" secondAttribute="trailing" id="gpX-Vj-hT0"/>
                 <constraint firstAttribute="leading" secondItem="i3o-bv-kDa" secondAttribute="leading" id="rWT-LD-Txj"/>
-                <constraint firstItem="02W-5j-HsA" firstAttribute="leading" secondItem="CZE-E0-vB4" secondAttribute="leading" constant="20" id="u9E-8P-Z5V"/>
-                <constraint firstItem="02W-5j-HsA" firstAttribute="width" secondItem="jZm-dJ-7YH" secondAttribute="width" id="zUq-bi-7ap"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="luy-bb-moV"/>
             <size key="customSize" width="392" height="343"/>
             <connections>
                 <outlet property="avatarImageVIew" destination="lxT-2z-TKg" id="1Bx-v6-5Gb"/>
                 <outlet property="cellContainer" destination="i3o-bv-kDa" id="lzP-vf-gMZ"/>
-                <outlet property="filterDateButton" destination="02W-5j-HsA" id="WbH-KG-vGc"/>
-                <outlet property="filterPopularityButton" destination="jZm-dJ-7YH" id="LxQ-Pt-EvW"/>
                 <outlet property="widthConstraint" destination="hPR-wZ-XTR" id="laF-n0-hGR"/>
                 <outletCollection property="underlines" destination="aNm-EB-Avc" collectionClass="NSMutableArray" id="JxY-8w-W2c"/>
                 <outletCollection property="underlines" destination="JtJ-cs-D98" collectionClass="NSMutableArray" id="Eir-GZ-Byu"/>
