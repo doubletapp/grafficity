@@ -10,8 +10,8 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        let arMapViewController = ARMapViewController()
-        present(arMapViewController, animated: true)
+        let mainViewController = MainViewController()
+        present(mainViewController, animated: true)
     }
 }
 
