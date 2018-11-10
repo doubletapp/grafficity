@@ -24,9 +24,17 @@
 		3613292D2195D59E00C22703 /* LocationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361329232195D59E00C22703 /* LocationNode.swift */; };
 		3613292E2195D59E00C22703 /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361329242195D59E00C22703 /* CLLocation+Extensions.swift */; };
 		361329332196E67600C22703 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361329322196E67600C22703 /* MainViewController.swift */; };
+		361329362197017B00C22703 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 361329352197017B00C22703 /* Profile.storyboard */; };
+		361329382197018800C22703 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361329372197018800C22703 /* ProfileViewController.swift */; };
+		3613293A2197042700C22703 /* ProfileHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361329392197042700C22703 /* ProfileHeaderCell.xib */; };
 		388F6888A1F834ACF29DAFA3 /* Pods_Grafficity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */; };
+		F466925C54A5EE5398D8A8AC /* TableViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46692FB653880B2B94810BB /* TableViewUtils.swift */; };
 		F466930649D311D43CB64503 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669BADCD098F28B9034EAF /* ImageUtils.swift */; };
+		F4669344C7F8B5A4FAEA94DC /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F466992334BD048DDD29D9BF /* ProfileHeaderCell.swift */; };
+		F4669454E12C1D1900890FEB /* CollectionViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46694D4A06671DC9E1F1872 /* CollectionViewUtils.swift */; };
 		F466948594E66FCF469EE50D /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669C3BCCE1BECBC4A15356 /* ColorUtils.swift */; };
+		F46699CD5999FBF176D8B765 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669AE17D2601BA0D12CF8F /* BaseCollectionViewCell.swift */; };
+		F4669EB67289415DAC5A1553 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669E10CC48746278540913 /* BaseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,10 +58,18 @@
 		361329232195D59E00C22703 /* LocationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNode.swift; sourceTree = "<group>"; };
 		361329242195D59E00C22703 /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
 		361329322196E67600C22703 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		361329352197017B00C22703 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		361329372197018800C22703 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		361329392197042700C22703 /* ProfileHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderCell.xib; sourceTree = "<group>"; };
 		C1B81B9F12C2C28645D866C7 /* Pods-Grafficity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grafficity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grafficity/Pods-Grafficity.debug.xcconfig"; sourceTree = "<group>"; };
 		EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grafficity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46692FB653880B2B94810BB /* TableViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewUtils.swift; sourceTree = "<group>"; };
+		F46694D4A06671DC9E1F1872 /* CollectionViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewUtils.swift; sourceTree = "<group>"; };
+		F466992334BD048DDD29D9BF /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
+		F4669AE17D2601BA0D12CF8F /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		F4669BADCD098F28B9034EAF /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		F4669C3BCCE1BECBC4A15356 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		F4669E10CC48746278540913 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +120,7 @@
 		361329152195D2E400C22703 /* view_controllers */ = {
 			isa = PBXGroup;
 			children = (
+				361329342197016600C22703 /* ProfileScreen */,
 				3613292F2196E62C00C22703 /* MainScreen */,
 				361329162195D3B600C22703 /* ARMap */,
 			);
@@ -124,6 +141,10 @@
 				3613291A2195D51500C22703 /* ARCL */,
 				F4669BADCD098F28B9034EAF /* ImageUtils.swift */,
 				F4669C3BCCE1BECBC4A15356 /* ColorUtils.swift */,
+				F46692FB653880B2B94810BB /* TableViewUtils.swift */,
+				F4669E10CC48746278540913 /* BaseTableViewCell.swift */,
+				F46694D4A06671DC9E1F1872 /* CollectionViewUtils.swift */,
+				F4669AE17D2601BA0D12CF8F /* BaseCollectionViewCell.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -153,6 +174,16 @@
 			path = MainScreen;
 			sourceTree = "<group>";
 		};
+		361329342197016600C22703 /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				361329352197017B00C22703 /* Profile.storyboard */,
+				361329372197018800C22703 /* ProfileViewController.swift */,
+				F46691766237A349C7E10527 /* cells */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
 		8D76646A2AF0BA911399190F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +199,15 @@
 				137E4FDAF797D52D0CB4E0EC /* Pods-Grafficity.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F46691766237A349C7E10527 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				F466992334BD048DDD29D9BF /* ProfileHeaderCell.swift */,
+				361329392197042700C22703 /* ProfileHeaderCell.xib */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +271,8 @@
 			files = (
 				3613290E2195AE5700C22703 /* LaunchScreen.storyboard in Resources */,
 				3613290B2195AE5700C22703 /* Assets.xcassets in Resources */,
+				361329362197017B00C22703 /* Profile.storyboard in Resources */,
+				3613293A2197042700C22703 /* ProfileHeaderCell.xib in Resources */,
 				361329092195AE5500C22703 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +312,7 @@
 				3613292E2195D59E00C22703 /* CLLocation+Extensions.swift in Sources */,
 				361329272195D59E00C22703 /* LocationManager.swift in Sources */,
 				3613292A2195D59E00C22703 /* SCNNode+Extensions.swift in Sources */,
+				361329382197018800C22703 /* ProfileViewController.swift in Sources */,
 				361329062195AE5500C22703 /* ViewController.swift in Sources */,
 				361329252195D59E00C22703 /* CGPoint+Extensions.swift in Sources */,
 				361329332196E67600C22703 /* MainViewController.swift in Sources */,
@@ -279,6 +322,11 @@
 				3613292C2195D59E00C22703 /* SCNVector3+Extensions.swift in Sources */,
 				F466930649D311D43CB64503 /* ImageUtils.swift in Sources */,
 				F466948594E66FCF469EE50D /* ColorUtils.swift in Sources */,
+				F466925C54A5EE5398D8A8AC /* TableViewUtils.swift in Sources */,
+				F4669EB67289415DAC5A1553 /* BaseTableViewCell.swift in Sources */,
+				F4669344C7F8B5A4FAEA94DC /* ProfileHeaderCell.swift in Sources */,
+				F4669454E12C1D1900890FEB /* CollectionViewUtils.swift in Sources */,
+				F46699CD5999FBF176D8B765 /* BaseCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

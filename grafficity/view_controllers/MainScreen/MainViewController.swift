@@ -10,7 +10,7 @@ class MainViewController: UITabBarController {
         let mapViewController = UIViewController()
         let feedViewController = UIViewController()
         let addViewController = UIViewController()
-        let profileViewController = UIViewController()
+        guard let profileViewController = UIStoryboard(name: "Profile", bundle: nil).instantiateInitialViewController() else { return }
         let settingsViewController = UIViewController()
 
         mapViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "tabbar_map_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "tabbar_map_icon"))
