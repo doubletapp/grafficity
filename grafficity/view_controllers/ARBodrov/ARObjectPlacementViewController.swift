@@ -12,6 +12,7 @@ enum PlacementStep {
 class ARObjectPlacementViewController: UIViewController {
     
     @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet weak var acceptButton: UIButton!
     
     var detectedPlanes: [String: SCNNode] = [:]
     var sourceImage: UIImage?
@@ -33,6 +34,10 @@ class ARObjectPlacementViewController: UIViewController {
             self.configureSession()
             self.statusViewController.scheduleMessage("НАВЕДИТЕСЬ НА ПОВЕРХНОСТЬ ДЛЯ РАСПОЛОЖЕНИЯ РИСУНКА", inSeconds: 7.5, messageType: .planeEstimation)
         }
+        
+        statusViewController.dismissViewControllerHandler = { [unowned self] in
+            self.dismiss(animated: true)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +54,26 @@ class ARObjectPlacementViewController: UIViewController {
         
         DispatchQueue.main.async { [weak self] in
             self?.sceneView.session.pause()
+        }
+    }
+    
+    @IBAction func acceptButtonAction() {
+        dismiss(animated: true)
+    }
+    
+    @objc func showAcceptButton() {
+        
+        acceptButton.isUserInteractionEnabled = true
+        UIView.animate(withDuration: 0.25) { [weak self] in
+            self?.acceptButton.alpha = 1.0
+        }
+    }
+    
+    @objc func hideAcceptButton() {
+        
+        acceptButton.isUserInteractionEnabled = false
+        UIView.animate(withDuration: 0.25) { [weak self] in
+            self?.acceptButton.alpha = 0.0
         }
     }
 }
@@ -133,6 +158,8 @@ extension ARObjectPlacementViewController: ARSCNViewDelegate, ARSessionDelegate 
 extension ARObjectPlacementViewController: UIGestureRecognizerDelegate {
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        hideAcceptButton()
         
         if gestureRecognizer is UIPanGestureRecognizer || otherGestureRecognizer is UIPanGestureRecognizer {
             return false
@@ -233,7 +260,10 @@ extension ARObjectPlacementViewController {
             break
         }
         
-        
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(showAcceptButton), object: nil)
+        if imageNode != nil {
+            perform(#selector(showAcceptButton), with: nil, afterDelay: 0.7)
+        }
     }
     
     @objc private func onPinchAction(_ sender: UIPinchGestureRecognizer) {
@@ -242,6 +272,10 @@ extension ARObjectPlacementViewController {
         let action = SCNAction.scale(by: sender.scale, duration: 0.1)
         imageNode.runAction(action)
         sender.scale = 1
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(showAcceptButton), object: nil)
+        if imageNode != nil {
+            perform(#selector(showAcceptButton), with: nil, afterDelay: 0.7)
+        }
     }
     
     @objc private func onRotateAction(_ sender: UIRotationGestureRecognizer) {
@@ -256,6 +290,10 @@ extension ARObjectPlacementViewController {
         }
         
         sender.rotation = 0
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(showAcceptButton), object: nil)
+        if imageNode != nil {
+            perform(#selector(showAcceptButton), with: nil, afterDelay: 0.7)
+        }
     }
     
     @objc private func onTapAction(_ sender: UITapGestureRecognizer) {
@@ -298,6 +336,11 @@ extension ARObjectPlacementViewController {
                 imageNode?.removeFromParentNode()
                 imageNode = nil
             }
+        }
+        
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(showAcceptButton), object: nil)
+        if imageNode != nil {
+            perform(#selector(showAcceptButton), with: nil, afterDelay: 0.7)
         }
     }
 }

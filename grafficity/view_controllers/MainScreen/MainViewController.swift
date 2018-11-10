@@ -3,6 +3,8 @@ import UIKit
 
 
 class MainViewController: UITabBarController {
+    
+    var imagePicker: UIImagePickerController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,7 @@ class MainViewController: UITabBarController {
         addViewController.tabBarItem.isEnabled = false
 
         addCentralButton()
+        initImagePickerController()
 
         tabBar.tintColor = UIColor(netHex: 0xe04a3d)
         tabBar.barTintColor = .white
@@ -43,9 +46,35 @@ class MainViewController: UITabBarController {
 
         tabBar.addSubview(centralButton)
     }
+    
+    private func initImagePickerController() {
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
+        self.imagePicker = imagePicker
+    }
 
     @objc func addButtonAction() {
-        print("add button selected")
+        guard let imagePicker = imagePicker else { return }
+        
+        present(imagePicker, animated: true)
+    }
+}
+
+extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        dismiss(animated: true) { [weak self] in
+            
+            let storyboard = UIStoryboard(name: "ARPlacementObject", bundle: Bundle.main)
+            if let vc = storyboard.instantiateInitialViewController() as? ARObjectPlacementViewController {
+                
+                vc.sourceImage = UIImage(named: "testImage")
+                self?.present(vc, animated: true)
+            }
+        }
     }
 }
 

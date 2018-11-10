@@ -28,6 +28,12 @@
 		361329382197018800C22703 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361329372197018800C22703 /* ProfileViewController.swift */; };
 		3613293A2197042700C22703 /* ProfileHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361329392197042700C22703 /* ProfileHeaderCell.xib */; };
 		388F6888A1F834ACF29DAFA3 /* Pods_Grafficity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */; };
+		6E0CB48D2195D3CB00B6C90A /* ARObjectPlacementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */; };
+		6E0CB48F2195D9CE00B6C90A /* ARPlacementObject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */; };
+		6E0CB4912196C0D600B6C90A /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB4902196C0D600B6C90A /* StatusViewController.swift */; };
+		6E0CB4932196E3E400B6C90A /* ARObject3DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */; };
+		6E0CB4952196E4F300B6C90A /* ARObject3DViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB4942196E4F300B6C90A /* ARObject3DViewController.storyboard */; };
+		6E0CB4B82196E94200B6C90A /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB4B72196E94200B6C90A /* art.scnassets */; };
 		F466925C54A5EE5398D8A8AC /* TableViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46692FB653880B2B94810BB /* TableViewUtils.swift */; };
 		F466930649D311D43CB64503 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669BADCD098F28B9034EAF /* ImageUtils.swift */; };
 		F4669344C7F8B5A4FAEA94DC /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F466992334BD048DDD29D9BF /* ProfileHeaderCell.swift */; };
@@ -35,12 +41,6 @@
 		F466948594E66FCF469EE50D /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669C3BCCE1BECBC4A15356 /* ColorUtils.swift */; };
 		F46699CD5999FBF176D8B765 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669AE17D2601BA0D12CF8F /* BaseCollectionViewCell.swift */; };
 		F4669EB67289415DAC5A1553 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4669E10CC48746278540913 /* BaseTableViewCell.swift */; };
-		6E0CB48D2195D3CB00B6C90A /* ARObjectPlacementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */; };
-		6E0CB48F2195D9CE00B6C90A /* ARPlacementObject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */; };
-		6E0CB4912196C0D600B6C90A /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB4902196C0D600B6C90A /* StatusViewController.swift */; };
-		6E0CB4932196E3E400B6C90A /* ARObject3DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */; };
-		6E0CB4952196E4F300B6C90A /* ARObject3DViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB4942196E4F300B6C90A /* ARObject3DViewController.storyboard */; };
-		6E0CB4B82196E94200B6C90A /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB4B72196E94200B6C90A /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,12 +52,6 @@
 		3613290A2195AE5700C22703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3613290D2195AE5700C22703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3613290F2195AE5700C22703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObjectPlacementViewController.swift; sourceTree = "<group>"; };
-		6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARPlacementObject.storyboard; sourceTree = "<group>"; };
-		6E0CB4902196C0D600B6C90A /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
-		6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObject3DViewController.swift; sourceTree = "<group>"; };
-		6E0CB4942196E4F300B6C90A /* ARObject3DViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARObject3DViewController.storyboard; sourceTree = "<group>"; };
-		6E0CB4B72196E94200B6C90A /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		361329172195D3D400C22703 /* ARMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMapViewController.swift; sourceTree = "<group>"; };
 		3613291B2195D59E00C22703 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		3613291C2195D59E00C22703 /* SceneLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationView.swift; sourceTree = "<group>"; };
@@ -73,6 +67,12 @@
 		361329352197017B00C22703 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		361329372197018800C22703 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		361329392197042700C22703 /* ProfileHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderCell.xib; sourceTree = "<group>"; };
+		6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObjectPlacementViewController.swift; sourceTree = "<group>"; };
+		6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARPlacementObject.storyboard; sourceTree = "<group>"; };
+		6E0CB4902196C0D600B6C90A /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObject3DViewController.swift; sourceTree = "<group>"; };
+		6E0CB4942196E4F300B6C90A /* ARObject3DViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARObject3DViewController.storyboard; sourceTree = "<group>"; };
+		6E0CB4B72196E94200B6C90A /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		C1B81B9F12C2C28645D866C7 /* Pods-Grafficity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grafficity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grafficity/Pods-Grafficity.debug.xcconfig"; sourceTree = "<group>"; };
 		EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grafficity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46692FB653880B2B94810BB /* TableViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewUtils.swift; sourceTree = "<group>"; };
@@ -122,12 +122,7 @@
 				361329152195D2E400C22703 /* view_controllers */,
 				361329032195AE5500C22703 /* AppDelegate.swift */,
 				361329052195AE5500C22703 /* ViewController.swift */,
-				6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */,
-				6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */,
-				6E0CB4902196C0D600B6C90A /* StatusViewController.swift */,
 				361329072195AE5500C22703 /* Main.storyboard */,
-				6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */,
-				6E0CB4942196E4F300B6C90A /* ARObject3DViewController.storyboard */,
 				3613290A2195AE5700C22703 /* Assets.xcassets */,
 				6E0CB4B72196E94200B6C90A /* art.scnassets */,
 				3613290C2195AE5700C22703 /* LaunchScreen.storyboard */,
@@ -136,16 +131,11 @@
 			path = grafficity;
 			sourceTree = "<group>";
 		};
-		6E0CB4962196E8BC00B6C90A /* Scenes objects */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Scenes objects";
-			sourceTree = "<group>";
-		};
 		361329152195D2E400C22703 /* view_controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6EE5F4BE219729000025D1DC /* ARObject */,
+				6EE5F4BD219728D80025D1DC /* ARBodrov */,
 				361329342197016600C22703 /* ProfileScreen */,
 				3613292F2196E62C00C22703 /* MainScreen */,
 				361329162195D3B600C22703 /* ARMap */,
@@ -208,6 +198,32 @@
 				F46691766237A349C7E10527 /* cells */,
 			);
 			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		6E0CB4962196E8BC00B6C90A /* Scenes objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Scenes objects";
+			sourceTree = "<group>";
+		};
+		6EE5F4BD219728D80025D1DC /* ARBodrov */ = {
+			isa = PBXGroup;
+			children = (
+				6E0CB48C2195D3CB00B6C90A /* ARObjectPlacementViewController.swift */,
+				6E0CB4902196C0D600B6C90A /* StatusViewController.swift */,
+				6E0CB48E2195D9CE00B6C90A /* ARPlacementObject.storyboard */,
+			);
+			path = ARBodrov;
+			sourceTree = "<group>";
+		};
+		6EE5F4BE219729000025D1DC /* ARObject */ = {
+			isa = PBXGroup;
+			children = (
+				6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */,
+				6E0CB4942196E4F300B6C90A /* ARObject3DViewController.storyboard */,
+			);
+			path = ARObject;
 			sourceTree = "<group>";
 		};
 		8D76646A2AF0BA911399190F /* Frameworks */ = {
