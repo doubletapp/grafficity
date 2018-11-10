@@ -11,20 +11,6 @@ import UIKit
 
 extension UIImage {
     
-    var isPortrait:  Bool    { return size.height > size.width }
-    var isLandscape: Bool    { return size.width > size.height }
-    var breadth:     CGFloat { return min(size.width, size.height) }
-    var breadthSize: CGSize  { return CGSize(width: breadth, height: breadth) }
-    var breadthRect: CGRect  { return CGRect(origin: .zero, size: breadthSize) }
-    var circleMasked: UIImage? {
-        UIGraphicsBeginImageContextWithOptions(breadthSize, false, scale)
-        defer { UIGraphicsEndImageContext() }
-        guard let cgImage = cgImage?.cropping(to: CGRect(origin: CGPoint(x: isLandscape ? floor((size.width - size.height) / 2) : 0, y: isPortrait  ? floor((size.height - size.width) / 2) : 0), size: breadthSize)) else { return nil }
-        UIBezierPath(ovalIn: breadthRect).addClip()
-        UIImage(cgImage: cgImage, scale: 1, orientation: imageOrientation).draw(in: breadthRect)
-        return UIGraphicsGetImageFromCurrentImageContext()
-    }
-    
     public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
         let rect = CGRect(origin: .zero, size: size)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
@@ -35,6 +21,28 @@ extension UIImage {
         
         guard let cgImage = image?.cgImage else { return nil }
         self.init(cgImage: cgImage)
+    }
+    
+    class func getMarker(with logoImage: UIImage? ) -> UIImage? {
+        
+        guard let logoImage = logoImage else {
+            return UIImage(named: "defaultMarker")
+        }
+        
+        guard let markerImage = UIImage(named: "defaultMarker") else { return nil }
+        
+        let roundedLogo = UIImage.maskRoundedImage(image: logoImage, sideLength: min(logoImage.size.width, logoImage.size.height))
+        
+        let newSize = markerImage.size // set this to what you need
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        
+        roundedLogo.draw(in: CGRect(origin: CGPoint(x: 10, y: 10), size: CGSize(width: 43, height: 43)))
+        markerImage.draw(in: CGRect(origin: CGPoint.zero, size: newSize))
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
     }
     
     class func getPreviewMarker(with logoImage: UIImage?, size: CGFloat) -> UIImage? {
@@ -89,52 +97,5 @@ class MyImageView: UIImageView {
             layer.cornerRadius = cornerRadius
             clipsToBounds = true
         }
-    }
-}
-
-
-import Foundation
-import UIKit
-
-extension UIImage {
-
-    class func getMarker(with logoImage: UIImage? ) -> UIImage? {
-
-        guard let logoImage = logoImage else {
-            return UIImage(named: "defaultMarker")
-        }
-
-        guard let markerImage = UIImage(named: "defaultMarker") else { return nil }
-
-        let roundedLogo = UIImage.maskRoundedImage(image: logoImage, sideLength: min(logoImage.size.width, logoImage.size.height))
-        
-        let newSize = markerImage.size // set this to what you need
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
-
-        roundedLogo.draw(in: CGRect(origin: CGPoint(x: 10, y: 10), size: CGSize(width: 43, height: 43)))
-        markerImage.draw(in: CGRect(origin: CGPoint.zero, size: newSize))
-
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-
-        return newImage
-    }
-    
-    class func maskRoundedImage(image: UIImage, sideLength: CGFloat) -> UIImage {
-        UIGraphicsBeginImageContext(CGSize(width: sideLength, height: sideLength))
-        image.draw(in: CGRect(origin: CGPoint.zero, size: CGSize(width: sideLength, height: sideLength)))
-        let croppedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-
-        let newImageView = UIImageView(image: croppedImage)
-        let layer = newImageView.layer
-        layer.masksToBounds = true
-        layer.cornerRadius = sideLength / 2
-        UIGraphicsBeginImageContext(CGSize(width: sideLength, height: sideLength))
-        layer.render(in: UIGraphicsGetCurrentContext()!)
-        let roundedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-
-        return roundedImage!
     }
 }
