@@ -35,9 +35,9 @@ extension UIImage {
         
         let newSize = markerImage.size // set this to what you need
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
-        
-        roundedLogo.draw(in: CGRect(origin: CGPoint(x: 10, y: 10), size: CGSize(width: 43, height: 43)))
+
         markerImage.draw(in: CGRect(origin: CGPoint.zero, size: newSize))
+        roundedLogo.draw(in: CGRect(origin: CGPoint(x: 10, y: 10), size: CGSize(width: 43, height: 43)))
         
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()

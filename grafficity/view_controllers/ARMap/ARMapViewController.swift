@@ -50,7 +50,7 @@ class ARMapViewController: UIViewController {
 //        sceneLocationView.orientToTrueNorth = false
 
 //        sceneLocationView.locationEstimateMethod = .coreLocationDataOnly
-        sceneLocationView.showAxesNode = true
+        sceneLocationView.showAxesNode = false
         sceneLocationView.locationDelegate = self
 
         if displayDebugging {
@@ -290,6 +290,18 @@ private extension ARMapViewController {
 
         if let alexandrColumnNeedle4 = buildNode(latitude: 59.939055, longitude: 30.320986, altitude: 8, image: UIImage(named: "alexandrColumn")) {
             nodes.append(alexandrColumnNeedle4)
+        }
+
+        if let alexandrColumnNeedle5 = buildNode(latitude: 59.938764, longitude: 30.320011, altitude: 16, image: UIImage(named: "alexandrColumn")) {
+            nodes.append(alexandrColumnNeedle5)
+        }
+
+        if let alexandrColumnNeedle6 = buildNode(latitude: 59.938849, longitude: 30.320027, altitude: 16, image: UIImage(named: "alexandrColumn")) {
+            nodes.append(alexandrColumnNeedle6)
+        }
+
+        if let alexandrColumnNeedle7 = buildNode(latitude: 59.938870, longitude: 30.320415, altitude: 16, image: UIImage(named: "alexandrColumn")) {
+            nodes.append(alexandrColumnNeedle7)
         }
 
         if let kazanCathedralNeedle = buildNode(latitude: 59.934432, longitude: 30.324518, altitude: 74, image: UIImage(named: "kazanCathedral")) {
