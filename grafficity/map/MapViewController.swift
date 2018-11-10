@@ -91,7 +91,9 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func didTapSwitchMode(_ sender: Any) {
-        // TODO: launch camera mode
+        DispatchQueue.main.async { [weak self] in
+            self?.present(ARMapViewController(), animated: true)
+        }
     }
     
     

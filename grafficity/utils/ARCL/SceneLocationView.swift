@@ -79,7 +79,7 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
 
     ///Whether debugging feature points should be displayed.
     ///Defaults to false
-    public var showFeaturePoints = false
+    public var showFeaturePoints = true
 
     ///Only to be overrided if you plan on manually setting True North.
     ///When true, sets up the scene to face what the device considers to be True North.
@@ -419,6 +419,7 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
                 locationNode.scale = SCNVector3(x: scale, y: scale, z: scale)
             } else if distance < SceneLocationView.minDistance {
                 locationNode.hideAlternativeNode()
+                let scale = 100 / Float(distance)
                 adjustedDistance = distance
                 let position = SCNVector3(
                     x: currentPosition.x + Float(locationTranslation.longitudeTranslation),
