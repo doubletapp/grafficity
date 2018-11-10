@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  grafficity
-//
-//  Created by Виктор Краснов on 09/11/2018.
-//  Copyright © 2018 doubletapp. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -22,6 +14,11 @@ class ViewController: UIViewController {
         self.present(mapViewController!, animated: true)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
+        let mainViewController = MainViewController()
+        present(mainViewController, animated: true)
+    }
 }
 
