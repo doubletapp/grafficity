@@ -14,7 +14,8 @@ class MainViewController: UITabBarController {
         let addViewController = UIViewController()
         guard let profileViewController = UIStoryboard(name: "Profile", bundle: nil).instantiateInitialViewController() else { return }
         guard let mapViewController = UIStoryboard(name: "MapView", bundle: nil).instantiateInitialViewController() else { return }
-        let settingsViewController = UIViewController()
+        guard let settingsViewController = UIStoryboard(name: "SettingsScreenView", bundle: nil).instantiateInitialViewController() else {
+            return }
 
         mapViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "tabbar_map_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "tabbar_map_icon"))
         feedViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "tabbar_feed_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "tabbar_feed_icon"))
