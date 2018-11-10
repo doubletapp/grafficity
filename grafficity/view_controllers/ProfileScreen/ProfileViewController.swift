@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController {
             (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = CGSize(width: 1, height: 1)
 
             collectionView.register(ProfileHeaderCell.self)
+            collectionView.register(ProfileFilterCell.self)
         }
     }
 
@@ -23,12 +24,13 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         cellDescriptions.append(CollectionViewCellDescription(cellType: ProfileHeaderCell.self, object: nil))
+        cellDescriptions.append(CollectionViewCellDescription(cellType: ProfileFilterCell.self, object: nil))
 
         collectionView.reloadData()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
         collectionView.reloadData()
     }
@@ -42,11 +44,4 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return collectionView.configureCell(with: cellDescriptions[indexPath.row], for: indexPath)
     }
-
-//    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        if indexPath.row == 0 {
-//            return CGSize(width: UIScreen.main.bounds.width, height: 300)
-//        }
-//        return CGSize(width: 0, height: 0)
-//    }
 }

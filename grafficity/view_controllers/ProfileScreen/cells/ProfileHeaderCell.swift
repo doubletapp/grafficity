@@ -21,7 +21,7 @@ class ProfileHeaderCell: UICollectionViewCell {
     }
 
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
 

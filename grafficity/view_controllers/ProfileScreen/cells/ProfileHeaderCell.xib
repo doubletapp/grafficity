@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3o-bv-kDa">
-                        <rect key="frame" x="0.0" y="0.0" width="392" height="275"/>
+                        <rect key="frame" x="0.0" y="0.0" width="392" height="323"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage" translatesAutoresizingMaskIntoConstraints="NO" id="lxT-2z-TKg">
                                 <rect key="frame" x="141.5" y="72" width="109" height="109"/>
@@ -29,13 +29,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Alex D." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8L-wH-B3l">
-                                <rect key="frame" x="166" y="194" width="60" height="24"/>
+                                <rect key="frame" x="166" y="194" width="60" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YHl-Qm-geY">
-                                <rect key="frame" x="0.0" y="227" width="392" height="48"/>
+                                <rect key="frame" x="0.0" y="275" width="392" height="48"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfA-CW-pds">
                                         <rect key="frame" x="0.0" y="0.0" width="130.5" height="48"/>
@@ -156,7 +156,7 @@
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="i3o-bv-kDa" secondAttribute="bottom" priority="999" constant="78" id="ZQ5-MU-zph"/>
+                <constraint firstAttribute="bottom" secondItem="i3o-bv-kDa" secondAttribute="bottom" priority="999" constant="20" id="ZQ5-MU-zph"/>
                 <constraint firstAttribute="top" secondItem="i3o-bv-kDa" secondAttribute="top" id="ewH-d5-iKS"/>
                 <constraint firstAttribute="trailing" secondItem="i3o-bv-kDa" secondAttribute="trailing" id="gpX-Vj-hT0"/>
                 <constraint firstAttribute="leading" secondItem="i3o-bv-kDa" secondAttribute="leading" id="rWT-LD-Txj"/>
