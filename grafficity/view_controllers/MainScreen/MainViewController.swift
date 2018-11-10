@@ -7,10 +7,10 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let mapViewController = UIViewController()
         let feedViewController = UIViewController()
         let addViewController = UIViewController()
         guard let profileViewController = UIStoryboard(name: "Profile", bundle: nil).instantiateInitialViewController() else { return }
+        guard let mapViewController = UIStoryboard(name: "MapView", bundle: nil).instantiateInitialViewController() else { return }
         let settingsViewController = UIViewController()
 
         mapViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "tabbar_map_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "tabbar_map_icon"))
@@ -24,6 +24,7 @@ class MainViewController: UITabBarController {
         tabBar.tintColor = UIColor(netHex: 0xe04a3d)
         tabBar.barTintColor = .white
         tabBar.backgroundColor = .white
+        tabBar.isTranslucent = false
 
         viewControllers = [mapViewController, feedViewController, addViewController, profileViewController, settingsViewController]
     }

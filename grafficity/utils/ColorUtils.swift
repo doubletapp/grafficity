@@ -117,6 +117,10 @@ extension UIColor {
             return UIColor(netHex: 0x000000, alpha: 0.25)
         }
     }
+    
+    open class var interfaceAccentColor: UIColor {
+        get {
+            return UIColor(netHex: 0xe04a3d)
+        }
+    }
 }
-
-

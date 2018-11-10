@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PreviewMarker" customModule="Grafficity" customModuleProvider="target">
+            <connections>
+                <outlet property="pin" destination="qgf-b6-t3F" id="mk9-y2-Wuj"/>
+                <outlet property="preview" destination="LTM-Kd-FM1" id="ulp-4A-UjT"/>
+                <outlet property="view" destination="iN0-l3-epB" id="oyX-Hv-fhH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="98" height="113"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LTM-Kd-FM1" userLabel="Preview View">
+                    <rect key="frame" x="5" y="5" width="88" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="LTM-Kd-FM1" secondAttribute="height" id="lxP-Hs-2tp"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapPin" translatesAutoresizingMaskIntoConstraints="NO" id="qgf-b6-t3F">
+                    <rect key="frame" x="39.5" y="96" width="19" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qgf-b6-t3F" secondAttribute="height" multiplier="1:1" id="Pfd-FQ-7Jy"/>
+                        <constraint firstAttribute="width" constant="19" id="dui-kk-gNP"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="qgf-b6-t3F" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="8vi-mI-A7W"/>
+                <constraint firstItem="LTM-Kd-FM1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="AVj-UA-p28"/>
+                <constraint firstItem="LTM-Kd-FM1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="fJC-IK-OnK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LTM-Kd-FM1" secondAttribute="trailing" constant="5" id="fUx-kz-Kcn"/>
+                <constraint firstItem="qgf-b6-t3F" firstAttribute="top" secondItem="LTM-Kd-FM1" secondAttribute="bottom" constant="3" id="hQg-xo-2nZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-83.200000000000003" y="-137.18140929535232"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mapPin" width="19" height="19"/>
+    </resources>
+</document>

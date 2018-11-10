@@ -41,6 +41,18 @@
 		6E0CB4932196E3E400B6C90A /* ARObject3DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */; };
 		6E0CB4952196E4F300B6C90A /* ARObject3DViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB4942196E4F300B6C90A /* ARObject3DViewController.storyboard */; };
 		6E0CB4B82196E94200B6C90A /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CB4B72196E94200B6C90A /* art.scnassets */; };
+		CC10CBA7219608C1001DB120 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBA6219608C1001DB120 /* ImageUtils.swift */; };
+		CC10CBA92196302A001DB120 /* GraffityRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBA82196302A001DB120 /* GraffityRecord.swift */; };
+		CC10CBAC21963161001DB120 /* ArtistRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBAB21963161001DB120 /* ArtistRecord.swift */; };
+		CC10CBAE21963409001DB120 /* ModelGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBAD21963409001DB120 /* ModelGenerator.swift */; };
+		CC10CBB021965909001DB120 /* PreviewMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC10CBAF21965909001DB120 /* PreviewMarker.xib */; };
+		CC10CBB221965921001DB120 /* PreviewMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB121965921001DB120 /* PreviewMarker.swift */; };
+		CC10CBB421965B62001DB120 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB321965B62001DB120 /* BaseView.swift */; };
+		CC10CBB62196C385001DB120 /* UIViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB52196C385001DB120 /* UIViewUtils.swift */; };
+		CC10CBB8219718A4001DB120 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10CBB7219718A4001DB120 /* ColorUtils.swift */; };
+		CC56EEB72195D37E00EA9EE9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */; };
+		CC56EEB92195D38D00EA9EE9 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */; };
+		CC56EEBB2195DFD500EA9EE9 /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +86,18 @@
 		361329372197018800C22703 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		361329392197042700C22703 /* ProfileHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderCell.xib; sourceTree = "<group>"; };
 		C1B81B9F12C2C28645D866C7 /* Pods-Grafficity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grafficity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grafficity/Pods-Grafficity.debug.xcconfig"; sourceTree = "<group>"; };
+		CC10CBA6219608C1001DB120 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		CC10CBA82196302A001DB120 /* GraffityRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraffityRecord.swift; sourceTree = "<group>"; };
+		CC10CBAB21963161001DB120 /* ArtistRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRecord.swift; sourceTree = "<group>"; };
+		CC10CBAD21963409001DB120 /* ModelGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGenerator.swift; sourceTree = "<group>"; };
+		CC10CBAF21965909001DB120 /* PreviewMarker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewMarker.xib; sourceTree = "<group>"; };
+		CC10CBB121965921001DB120 /* PreviewMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMarker.swift; sourceTree = "<group>"; };
+		CC10CBB321965B62001DB120 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		CC10CBB52196C385001DB120 /* UIViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtils.swift; sourceTree = "<group>"; };
+		CC10CBB7219718A4001DB120 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
+		CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MapStyle.json; sourceTree = "<group>"; };
 		EBEAE71338505420FFC5F7D9 /* Pods_Grafficity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grafficity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46692FB653880B2B94810BB /* TableViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewUtils.swift; sourceTree = "<group>"; };
 		F46694D4A06671DC9E1F1872 /* CollectionViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewUtils.swift; sourceTree = "<group>"; };
@@ -118,8 +142,11 @@
 		361329022195AE5500C22703 /* grafficity */ = {
 			isa = PBXGroup;
 			children = (
-				361329192195D3E000C22703 /* utils */,
 				361329152195D2E400C22703 /* view_controllers */,
+				CC56EEB52195CF2700EA9EE9 /* map */,
+				CC10CBA5219608B1001DB120 /* utils */,
+				CC10CBAA2196313F001DB120 /* model */,
+				361329192195D3E000C22703 /* utils */,
 				361329032195AE5500C22703 /* AppDelegate.swift */,
 				361329052195AE5500C22703 /* ViewController.swift */,
 				6E0CB4922196E3E400B6C90A /* ARObject3DViewController.swift */,
@@ -218,6 +245,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CC10CBA5219608B1001DB120 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				CC10CBA6219608C1001DB120 /* ImageUtils.swift */,
+				CC10CBB52196C385001DB120 /* UIViewUtils.swift */,
+				CC10CBB7219718A4001DB120 /* ColorUtils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		CC10CBAA2196313F001DB120 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CC10CBA82196302A001DB120 /* GraffityRecord.swift */,
+				CC10CBAB21963161001DB120 /* ArtistRecord.swift */,
+				CC10CBAD21963409001DB120 /* ModelGenerator.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		CC56EEB52195CF2700EA9EE9 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				CC56EEB62195D37E00EA9EE9 /* MapViewController.swift */,
+				CC56EEB82195D38D00EA9EE9 /* MapView.storyboard */,
+				CC56EEBA2195DDD500EA9EE9 /* MapStyle.json */,
+				CC10CBAF21965909001DB120 /* PreviewMarker.xib */,
+				CC10CBB121965921001DB120 /* PreviewMarker.swift */,
+				CC10CBB321965B62001DB120 /* BaseView.swift */,
+			);
+			path = map;
+			sourceTree = "<group>";
+		};
 		D6C070E6D3F372A31CDF6F82 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +307,7 @@
 				361328FC2195AE5500C22703 /* Sources */,
 				361328FD2195AE5500C22703 /* Frameworks */,
 				361328FE2195AE5500C22703 /* Resources */,
+				6D1C4BAD9E3C7AB8C4B68582 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,13 +356,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC10CBB021965909001DB120 /* PreviewMarker.xib in Resources */,
 				3613290E2195AE5700C22703 /* LaunchScreen.storyboard in Resources */,
 				6E0CB4B82196E94200B6C90A /* art.scnassets in Resources */,
 				6E0CB4952196E4F300B6C90A /* ARObject3DViewController.storyboard in Resources */,
+				CC56EEBB2195DFD500EA9EE9 /* MapStyle.json in Resources */,
 				3613290B2195AE5700C22703 /* Assets.xcassets in Resources */,
 				6E0CB48F2195D9CE00B6C90A /* ARPlacementObject.storyboard in Resources */,
 				361329362197017B00C22703 /* Profile.storyboard in Resources */,
 				3613293A2197042700C22703 /* ProfileHeaderCell.xib in Resources */,
+				CC56EEB92195D38D00EA9EE9 /* MapView.storyboard in Resources */,
 				361329092195AE5500C22703 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +391,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6D1C4BAD9E3C7AB8C4B68582 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Grafficity/Pods-Grafficity-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Grafficity/Pods-Grafficity-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -344,10 +426,19 @@
 				361329272195D59E00C22703 /* LocationManager.swift in Sources */,
 				3613292A2195D59E00C22703 /* SCNNode+Extensions.swift in Sources */,
 				361329382197018800C22703 /* ProfileViewController.swift in Sources */,
+				CC10CBB62196C385001DB120 /* UIViewUtils.swift in Sources */,
 				361329062195AE5500C22703 /* ViewController.swift in Sources */,
+				CC10CBAC21963161001DB120 /* ArtistRecord.swift in Sources */,
+				CC10CBB221965921001DB120 /* PreviewMarker.swift in Sources */,
+				CC56EEB72195D37E00EA9EE9 /* MapViewController.swift in Sources */,
+				CC10CBA7219608C1001DB120 /* ImageUtils.swift in Sources */,
 				361329252195D59E00C22703 /* CGPoint+Extensions.swift in Sources */,
 				361329332196E67600C22703 /* MainViewController.swift in Sources */,
 				361329042195AE5500C22703 /* AppDelegate.swift in Sources */,
+				CC10CBB421965B62001DB120 /* BaseView.swift in Sources */,
+				CC10CBB8219718A4001DB120 /* ColorUtils.swift in Sources */,
+				CC10CBAE21963409001DB120 /* ModelGenerator.swift in Sources */,
+				CC10CBA92196302A001DB120 /* GraffityRecord.swift in Sources */,
 				6E0CB4932196E3E400B6C90A /* ARObject3DViewController.swift in Sources */,
 				361329282195D59E00C22703 /* FloatingPoint+Radians.swift in Sources */,
 				361329292195D59E00C22703 /* SceneLocationEstimate+Extensions.swift in Sources */,
@@ -506,14 +597,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3LUSBKM7UR;
+				DEVELOPMENT_TEAM = 8L7988R5NG;
 				INFOPLIST_FILE = grafficity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.doubletapp.grafficity.art;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.doubletapp.grafficity.hash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -526,14 +617,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3LUSBKM7UR;
+				DEVELOPMENT_TEAM = 8L7988R5NG;
 				INFOPLIST_FILE = grafficity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.doubletapp.grafficity.art;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.doubletapp.grafficity.hash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
