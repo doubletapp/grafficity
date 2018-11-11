@@ -12,11 +12,10 @@ import UIKit
 class SettingsScreenViewController: UITableViewController {
     
     var cellDescriptions: [TableViewCellDescription] = []
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.tableView.delegate = self
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        tableView.cellForRow(at: indexPath)?.setSelected(false, animated: true)
     }
 }
 
