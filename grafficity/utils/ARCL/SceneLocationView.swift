@@ -75,6 +75,7 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
     var detectedPlanes: [String: SCNNode] = [:]
     var placementOrientation: ARPlaneAnchor.Alignment = .horizontal
     var bananaScene = SCNScene(named: "art.scnassets/12256_canadiangoos_v1_l3.scn")
+    var isBigGoose = false
 
     public private(set) var sceneNode: SCNNode? {
         didSet {
@@ -254,14 +255,8 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
         }
     }
     
-    func addBodrov(x: Float, y: Float, z: Float) {
-        
-        
-    }
-    
-    func addBanana(x: Float, y: Float, z: Float) {
-        
-        
+    @objc func changeSize() {
+        isBigGoose = !isBigGoose
     }
 
     @objc private func updateLocationData() {
@@ -615,7 +610,13 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
             let bananaNode = bananaScene?.rootNode.childNode(withName: "Body_02___Default", recursively: true) {
             
             let position = anchor.transform.translation
-            bananaNode.scale = SCNVector3(0.03, 0.03, 0.03)
+            
+            if !isBigGoose {
+                bananaNode.scale = SCNVector3(0.03, 0.03, 0.03)
+            } else {
+                bananaNode.scale = SCNVector3(1, 1, 1)
+            }
+            
             bananaNode.position = SCNVector3(position.x, position.y + 0.5, position.z)
             bananaNode.eulerAngles.x = -.pi / 2
             objectNode = bananaNode
