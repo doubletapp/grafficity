@@ -29,7 +29,7 @@
                                 <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8WN-jh-7Cq">
-                                <rect key="frame" x="-47" y="0.5" width="469" height="354"/>
+                                <rect key="frame" x="-47" y="8" width="469" height="339"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="a1e-Yo-ala">
@@ -102,7 +102,7 @@
                             <constraint firstItem="a1e-Yo-ala" firstAttribute="top" secondItem="xRS-aa-Sf9" secondAttribute="top" constant="10" id="Oev-Gc-7TL"/>
                             <constraint firstItem="a1e-Yo-ala" firstAttribute="leading" secondItem="xRS-aa-Sf9" secondAttribute="leading" constant="20" id="Q87-Ze-lce"/>
                             <constraint firstItem="d5D-G1-aew" firstAttribute="leading" secondItem="xRS-aa-Sf9" secondAttribute="leading" constant="20" id="dHJ-gm-Dhf"/>
-                            <constraint firstItem="8WN-jh-7Cq" firstAttribute="height" secondItem="a1e-Yo-ala" secondAttribute="height" multiplier="1.2" id="kFH-Rs-hGb"/>
+                            <constraint firstItem="8WN-jh-7Cq" firstAttribute="height" secondItem="a1e-Yo-ala" secondAttribute="height" multiplier="1.15" id="kFH-Rs-hGb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xRS-aa-Sf9"/>
                     </view>
@@ -113,6 +113,7 @@
                         <outlet property="filterDateButton" destination="JRh-r2-qpB" id="yGN-kf-r6F"/>
                         <outlet property="filterPopularityButton" destination="Moi-7f-9cI" id="ofe-o9-4P7"/>
                         <outlet property="topCollectionView" destination="uC0-fI-vYF" id="Kj2-z0-fFk"/>
+                        <outlet property="whiteShadowView" destination="8WN-jh-7Cq" id="oOm-Q0-1pn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83t-SA-JHu" userLabel="First Responder" sceneMemberID="firstResponder"/>

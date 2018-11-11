@@ -11,6 +11,16 @@ class MapViewController: UIViewController {
     @IBOutlet weak var switchModeButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
     
+    @IBOutlet weak var shadowView: UIView! {
+        didSet {
+            shadowView.layer.cornerRadius = shadowView.frame.height / 2
+            shadowView.layer.shadowOffset = CGSize(width: 0, height: 2)
+            shadowView.layer.shadowOpacity = 1.0
+            shadowView.layer.shadowRadius = 4
+            shadowView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.27).cgColor
+        }
+    }
+    
     @IBOutlet weak var markersSetSwitch: UISegmentedControl! {
         didSet {
             markersSetSwitch.layer.cornerRadius = 20

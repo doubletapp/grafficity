@@ -28,8 +28,13 @@
                                     <outlet property="delegate" destination="3se-Yx-VRn" id="rIl-km-DND"/>
                                 </connections>
                             </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqy-EI-IDL">
+                                <rect key="frame" x="67.5" y="102" width="240" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K6A-5E-bNp" userLabel="SegmentSwitch">
                                 <rect key="frame" x="67.5" y="102" width="240" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8JU-k5-Qd7"/>
                                     <constraint firstAttribute="width" constant="240" id="kqQ-dl-84o"/>
@@ -186,18 +191,22 @@
                         <constraints>
                             <constraint firstItem="w8i-gE-zH0" firstAttribute="trailing" secondItem="Pbz-e9-bBG" secondAttribute="trailing" id="2A7-SY-QTF"/>
                             <constraint firstItem="mcO-Yy-T6e" firstAttribute="bottom" secondItem="Lrl-Pw-ng6" secondAttribute="top" constant="-15" id="8uA-dQ-coj"/>
+                            <constraint firstItem="bqy-EI-IDL" firstAttribute="centerY" secondItem="K6A-5E-bNp" secondAttribute="centerY" id="BAJ-Gf-tLK"/>
                             <constraint firstItem="w8i-gE-zH0" firstAttribute="trailing" secondItem="hpU-iM-Npd" secondAttribute="trailing" constant="15" id="CnS-2D-JYt"/>
                             <constraint firstItem="rMf-G6-gX9" firstAttribute="top" secondItem="Fk1-8m-4A7" secondAttribute="top" id="Dfr-Ct-rTP"/>
                             <constraint firstItem="w8i-gE-zH0" firstAttribute="trailing" secondItem="Lrl-Pw-ng6" secondAttribute="trailing" id="Dgd-lP-4BH"/>
                             <constraint firstItem="Lrl-Pw-ng6" firstAttribute="leading" secondItem="w8i-gE-zH0" secondAttribute="leading" id="HMe-1Z-vjV"/>
+                            <constraint firstItem="bqy-EI-IDL" firstAttribute="width" secondItem="K6A-5E-bNp" secondAttribute="width" id="JQm-ge-HlO"/>
                             <constraint firstItem="rMf-G6-gX9" firstAttribute="leading" secondItem="Fk1-8m-4A7" secondAttribute="leading" id="R3o-uA-T5Z"/>
                             <constraint firstItem="K6A-5E-bNp" firstAttribute="centerX" secondItem="w8i-gE-zH0" secondAttribute="centerX" id="UUB-Hr-X1j"/>
                             <constraint firstAttribute="trailing" secondItem="rMf-G6-gX9" secondAttribute="trailing" id="XXz-td-d4x"/>
                             <constraint firstItem="mcO-Yy-T6e" firstAttribute="top" secondItem="hpU-iM-Npd" secondAttribute="bottom" constant="15" id="YeO-Js-3TD"/>
+                            <constraint firstItem="bqy-EI-IDL" firstAttribute="centerX" secondItem="K6A-5E-bNp" secondAttribute="centerX" id="ZSt-WM-qyD"/>
                             <constraint firstItem="Kby-IN-MZD" firstAttribute="trailing" secondItem="Pbz-e9-bBG" secondAttribute="trailing" constant="-29" id="abT-ib-e7P"/>
                             <constraint firstItem="Kby-IN-MZD" firstAttribute="centerY" secondItem="Pbz-e9-bBG" secondAttribute="centerY" constant="-2" id="bP6-h7-JLc"/>
                             <constraint firstItem="w8i-gE-zH0" firstAttribute="trailing" secondItem="mcO-Yy-T6e" secondAttribute="trailing" constant="15" id="bYQ-mi-BdU"/>
                             <constraint firstAttribute="bottom" secondItem="rMf-G6-gX9" secondAttribute="bottom" id="bwU-va-62M"/>
+                            <constraint firstItem="bqy-EI-IDL" firstAttribute="height" secondItem="K6A-5E-bNp" secondAttribute="height" id="gFP-J7-cfp"/>
                             <constraint firstItem="Pbz-e9-bBG" firstAttribute="top" secondItem="w8i-gE-zH0" secondAttribute="top" constant="15" id="hYI-QS-nNj"/>
                             <constraint firstItem="Lrl-Pw-ng6" firstAttribute="top" secondItem="rMf-G6-gX9" secondAttribute="bottom" id="hcN-hu-pYV"/>
                             <constraint firstAttribute="bottom" secondItem="Lrl-Pw-ng6" secondAttribute="bottom" priority="750" constant="-171" id="q7N-pr-Wd1"/>
@@ -220,6 +229,7 @@
                         <outlet property="markersSetSwitch" destination="K6A-5E-bNp" id="iw9-Kr-Kgc"/>
                         <outlet property="searchBar" destination="Pbz-e9-bBG" id="FAg-BZ-pbs"/>
                         <outlet property="searchDisplayController" destination="iKV-Dj-ZrT" id="99k-el-nbG"/>
+                        <outlet property="shadowView" destination="bqy-EI-IDL" id="9Wr-PQ-MRf"/>
                         <outlet property="switchModeButton" destination="hpU-iM-Npd" id="iP8-21-XBo"/>
                     </connections>
                 </viewController>
