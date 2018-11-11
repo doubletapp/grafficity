@@ -615,8 +615,8 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
             let bananaNode = bananaScene?.rootNode.childNode(withName: "banana_001", recursively: true) {
             
             let position = anchor.transform.translation
-            bananaNode.scale = SCNVector3(0.3, 0.3, 0.3)
-            bananaNode.position = SCNVector3(position.x, position.y + 1, position.z)
+            bananaNode.scale = SCNVector3(0.03, 0.03, 0.03)
+            bananaNode.position = SCNVector3(position.x, position.y + 0.15, position.z)
             bananaNode.eulerAngles.z = .pi / 2
             objectNode = bananaNode
             node.addChildNode(bananaNode)
