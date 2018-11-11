@@ -34,6 +34,15 @@ class GraffityViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var descView: UIView! {
+        didSet {
+            descView.layer.shadowColor = UIColor(red: 59.0/255.0, green: 59.0/255.0, blue: 59.0/255.0, alpha: 0.15).cgColor
+            descView.layer.shadowOffset = CGSize(width: 0, height: 10)
+            descView.layer.shadowRadius = 10.0
+            descView.layer.shadowOpacity = 1.0
+        }
+    }
+    
     override func viewDidLoad() {
         graffityTitle.text = record.name
         authorTitle.text = record.artist
