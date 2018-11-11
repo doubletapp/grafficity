@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import CoreLocation
+import GoogleMaps
 
 class ModelGenerator {
     
@@ -47,12 +48,25 @@ class ModelGenerator {
     class func generateGraffities() -> [GraffityRecord] {
         var records: [GraffityRecord] = []
         
+        let path = GMSMutablePath()
+        path.add(CLLocationCoordinate2D(latitude: 59.9315, longitude: 30.2830))
+        path.add(CLLocationCoordinate2D(latitude: 59.9487, longitude: 30.3484))
+        path.add(CLLocationCoordinate2D(latitude: 59.9149, longitude: 30.3360))
+        
         for i in 0...12 {
             let record = GraffityRecord(
                 artist: artists[i],
                 name: artworks[i])
-            let latitude = Double.random(in: 59.925467...59.946543)
-            let longitude = Double.random(in: 30.301036...30.326785)
+            var latitude = 0.0
+            var longitude = 0.0
+            while (!GMSGeometryContainsLocation(
+                	CLLocationCoordinate2D(latitude: latitude, longitude: longitude),
+                	path,
+                    true)) {
+                latitude = Double.random(in: 59.9315...59.9487)
+                longitude = Double.random(in: 30.2830...30.3360)
+            }
+            
             record.location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             record.preview = UIImage(named: "graffity\(i)")
             record.rating = Double.random(in: 0.0...1.0)
