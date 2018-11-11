@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cax-hf-Jls">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cax-hf-Jls">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNd-qH-HuJ" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="750"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="757"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graffity0" translatesAutoresizingMaskIntoConstraints="NO" id="YLh-uy-S6N" userLabel="Preview Image">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
@@ -51,7 +51,7 @@
                                                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="OXV-vm-ytH">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" image="clockSmall" translatesAutoresizingMaskIntoConstraints="NO" id="OXV-vm-ytH">
                                                                         <rect key="frame" x="261.5" y="3.5" width="10" height="10"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" text="42 дня" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVn-bl-9Sf">
@@ -215,15 +215,15 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sgz-aM-ISp" userLabel="Simular View">
-                                                <rect key="frame" x="0.0" y="608" width="375" height="142"/>
+                                                <rect key="frame" x="0.0" y="615" width="375" height="142"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Другие работы этого художника" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3st-c5-wQb">
-                                                        <rect key="frame" x="27" y="30" width="190" height="0.0"/>
+                                                        <rect key="frame" x="27" y="12" width="190" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Dl-8t-8HP">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Dl-8t-8HP">
                                                         <rect key="frame" x="20" y="42" width="335" height="80"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -261,11 +261,11 @@
                                                         </cells>
                                                     </collectionView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.97335108370702539" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="3st-c5-wQb" firstAttribute="leading" secondItem="sgz-aM-ISp" secondAttribute="leading" constant="27" id="8AO-5c-eNu"/>
                                                     <constraint firstItem="3Dl-8t-8HP" firstAttribute="top" secondItem="3st-c5-wQb" secondAttribute="bottom" constant="12" id="AqZ-JX-DLp"/>
-                                                    <constraint firstItem="3st-c5-wQb" firstAttribute="top" secondItem="sgz-aM-ISp" secondAttribute="top" constant="30" id="Kuk-vS-4ab"/>
+                                                    <constraint firstItem="3st-c5-wQb" firstAttribute="top" secondItem="sgz-aM-ISp" secondAttribute="top" constant="12" id="Kuk-vS-4ab"/>
                                                     <constraint firstItem="3Dl-8t-8HP" firstAttribute="leading" secondItem="sgz-aM-ISp" secondAttribute="leading" constant="20" id="LQ0-Ni-g9s"/>
                                                     <constraint firstAttribute="trailing" secondItem="3Dl-8t-8HP" secondAttribute="trailing" constant="20" id="QPK-5r-QWn"/>
                                                     <constraint firstAttribute="height" constant="142" id="h9R-BG-Qo5"/>
@@ -282,7 +282,7 @@
                                             <constraint firstAttribute="trailing" secondItem="DTy-4y-Obg" secondAttribute="trailing" id="Spj-1J-Fmy"/>
                                             <constraint firstAttribute="trailing" secondItem="YLh-uy-S6N" secondAttribute="trailing" id="Tuw-Q2-bZS"/>
                                             <constraint firstAttribute="trailing" secondItem="sgz-aM-ISp" secondAttribute="trailing" id="XIx-jf-7GE"/>
-                                            <constraint firstItem="sgz-aM-ISp" firstAttribute="top" secondItem="DTy-4y-Obg" secondAttribute="bottom" constant="8" symbolic="YES" id="dii-fO-Ccl"/>
+                                            <constraint firstItem="sgz-aM-ISp" firstAttribute="top" secondItem="DTy-4y-Obg" secondAttribute="bottom" constant="15" id="dii-fO-Ccl"/>
                                             <constraint firstItem="5oE-25-KJV" firstAttribute="leading" secondItem="YLh-uy-S6N" secondAttribute="leading" constant="32" id="exj-w7-oT3"/>
                                             <constraint firstItem="sgz-aM-ISp" firstAttribute="leading" secondItem="xNd-qH-HuJ" secondAttribute="leading" id="fpw-nv-k2I"/>
                                             <constraint firstItem="5oE-25-KJV" firstAttribute="top" secondItem="YLh-uy-S6N" secondAttribute="top" constant="48" id="iQe-Ly-2ws"/>
@@ -298,7 +298,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.97335108370000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cax-hf-Jls" firstAttribute="leading" secondItem="YaD-Rt-mkU" secondAttribute="leading" id="G4C-5a-uql"/>
                             <constraint firstItem="Cax-hf-Jls" firstAttribute="top" secondItem="YaD-Rt-mkU" secondAttribute="top" id="Hyh-lt-zsT"/>
@@ -313,6 +313,7 @@
                         <outlet property="authorTitle" destination="Ggj-33-7W8" id="ObF-tP-1XP"/>
                         <outlet property="backArrow" destination="5oE-25-KJV" id="uZf-tx-loE"/>
                         <outlet property="checkinLabel" destination="LHj-Ea-rxh" id="YfZ-P4-H8h"/>
+                        <outlet property="descView" destination="DTy-4y-Obg" id="UFu-F2-5Z3"/>
                         <outlet property="graffityTitle" destination="kYK-qr-A6o" id="Par-bE-bte"/>
                         <outlet property="otherWorks" destination="3Dl-8t-8HP" id="2yl-45-Hvb"/>
                         <outlet property="previewImage" destination="YLh-uy-S6N" id="bUS-2f-JVR"/>
@@ -329,7 +330,7 @@
     <resources>
         <image name="arrow" width="10" height="18"/>
         <image name="checkin" width="30" height="30"/>
-        <image name="clock" width="10" height="10"/>
+        <image name="clockSmall" width="10" height="10"/>
         <image name="graffity0" width="340" height="555"/>
         <image name="inactiveCheckboxCopy2" width="14" height="15"/>
         <image name="starOutline" width="32" height="30"/>
