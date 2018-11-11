@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NFQ-lV-klk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Feed View Controller-->
+        <scene sceneID="HoM-EQ-6GP">
+            <objects>
+                <viewController id="NFQ-lV-klk" customClass="FeedViewController" customModule="Grafficity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nb0-Vq-egB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d5D-G1-aew">
+                                <rect key="frame" x="20" y="340" width="335" height="327"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="20" id="lWR-dW-7mO">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8WN-jh-7Cq">
+                                <rect key="frame" x="-47" y="0.5" width="469" height="354"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="a1e-Yo-ala">
+                                <rect key="frame" x="20" y="30" width="335" height="295"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текущие конкурсы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xp-2p-U0g">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-fI-vYF">
+                                        <rect key="frame" x="0.0" y="34" width="335" height="180"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="jHU-Zg-M3g"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="F30-7x-Fa5">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Лента уличного искусства" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4U9-NX-awo">
+                                        <rect key="frame" x="0.0" y="224" width="335" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Eur-gY-4os">
+                                        <rect key="frame" x="0.0" y="258" width="335" height="37"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRh-r2-qpB">
+                                                <rect key="frame" x="0.0" y="0.0" width="157" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                                                <state key="normal" title="По дате"/>
+                                                <connections>
+                                                    <action selector="filterDateAction" destination="NFQ-lV-klk" eventType="touchUpInside" id="jA8-Yv-Vbo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Moi-7f-9cI">
+                                                <rect key="frame" x="178" y="0.0" width="157" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                                                <state key="normal" title="По популярности"/>
+                                                <connections>
+                                                    <action selector="filterPopularityAction" destination="NFQ-lV-klk" eventType="touchUpInside" id="cCY-rk-RvD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="FgF-fj-63D"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xRS-aa-Sf9" firstAttribute="trailing" secondItem="d5D-G1-aew" secondAttribute="trailing" constant="20" id="2Ij-uR-UiN"/>
+                            <constraint firstItem="d5D-G1-aew" firstAttribute="top" secondItem="a1e-Yo-ala" secondAttribute="bottom" constant="15" id="7O8-Ra-tnb"/>
+                            <constraint firstItem="8WN-jh-7Cq" firstAttribute="centerY" secondItem="a1e-Yo-ala" secondAttribute="centerY" id="84z-Cg-NRZ"/>
+                            <constraint firstItem="8WN-jh-7Cq" firstAttribute="centerX" secondItem="a1e-Yo-ala" secondAttribute="centerX" id="Eaz-dm-5bg"/>
+                            <constraint firstItem="xRS-aa-Sf9" firstAttribute="trailing" secondItem="a1e-Yo-ala" secondAttribute="trailing" constant="20" id="LdD-Za-ANn"/>
+                            <constraint firstAttribute="bottom" secondItem="d5D-G1-aew" secondAttribute="bottom" id="M07-zT-rLb"/>
+                            <constraint firstItem="8WN-jh-7Cq" firstAttribute="width" secondItem="a1e-Yo-ala" secondAttribute="width" multiplier="1.4" id="MWt-Rg-UOr"/>
+                            <constraint firstItem="a1e-Yo-ala" firstAttribute="top" secondItem="xRS-aa-Sf9" secondAttribute="top" constant="10" id="Oev-Gc-7TL"/>
+                            <constraint firstItem="a1e-Yo-ala" firstAttribute="leading" secondItem="xRS-aa-Sf9" secondAttribute="leading" constant="20" id="Q87-Ze-lce"/>
+                            <constraint firstItem="d5D-G1-aew" firstAttribute="leading" secondItem="xRS-aa-Sf9" secondAttribute="leading" constant="20" id="dHJ-gm-Dhf"/>
+                            <constraint firstItem="8WN-jh-7Cq" firstAttribute="height" secondItem="a1e-Yo-ala" secondAttribute="height" multiplier="1.2" id="kFH-Rs-hGb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xRS-aa-Sf9"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="bottomCollectionView" destination="d5D-G1-aew" id="wXB-l4-xbN"/>
+                        <outlet property="filterDateButton" destination="JRh-r2-qpB" id="yGN-kf-r6F"/>
+                        <outlet property="filterPopularityButton" destination="Moi-7f-9cI" id="ofe-o9-4P7"/>
+                        <outlet property="topCollectionView" destination="uC0-fI-vYF" id="Kj2-z0-fFk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83t-SA-JHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154" y="162"/>
+        </scene>
+    </scenes>
+</document>
