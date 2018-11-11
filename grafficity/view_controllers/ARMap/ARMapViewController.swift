@@ -97,6 +97,10 @@ class ARMapViewController: UIViewController {
         // Pause the view's session
         sceneLocationView.pause()
     }
+    
+    @objc func switchBigGooseAction() {
+        sceneLocationView.changeSize()
+    }
 
     var bottomPreviewConstraint: NSLayoutConstraint?
 
@@ -109,6 +113,20 @@ class ARMapViewController: UIViewController {
         closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         closeButton.widthAnchor.constraint(equalToConstant: 46).isActive = true
         closeButton.heightAnchor.constraint(equalToConstant: 46).isActive = true
+        
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(switchBigGooseAction), for: .touchUpInside)
+        button.setTitle("", for: .normal)
+        button.backgroundColor = UIColor.clear
+        view.addSubview(button)
+        
+        NSLayoutConstraint.activate([
+            button.widthAnchor.constraint(equalToConstant: 46),
+            button.heightAnchor.constraint(equalTo: button.widthAnchor),
+            button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            button.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+        ])
     }
 
     @objc func closeScreen() {
