@@ -30,6 +30,15 @@ class FeedViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var whiteShadowView: UIView! {
+        didSet {
+            whiteShadowView.layer.shadowOpacity = 1.0
+            whiteShadowView.layer.shadowRadius = 4
+            whiteShadowView.layer.shadowOffset = CGSize(width: 0, height: 7)
+            whiteShadowView.layer.shadowColor = UIColor.white.cgColor
+        }
+    }
+    
     var cellDescriptions = [CollectionViewCellDescription]()
     var cellDescriptionsTwo = [CollectionViewCellDescription]()
     var cellWidth: CGFloat = 0
