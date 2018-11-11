@@ -13,6 +13,7 @@ class GraffityViewController: UIViewController {
     
     var record: GraffityRecord!
 	
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var previewImage: UIImageView!
     @IBOutlet weak var authorTitle: UILabel!
     @IBOutlet weak var graffityTitle: UILabel!
@@ -27,6 +28,11 @@ class GraffityViewController: UIViewController {
             backArrow.addGestureRecognizer(tapRecognizer)
         }
     }
+    @IBOutlet weak var otherWorks: UICollectionView! {
+        didSet {
+            otherWorks.dataSource = self
+        }
+    }
     
     override func viewDidLoad() {
         graffityTitle.text = record.name
@@ -34,9 +40,33 @@ class GraffityViewController: UIViewController {
         previewImage.image = record.preview
         ratingLabel.text = "\(Int.random(in: 1...999))"
         checkinLabel.text = "\(Int.random(in: 0...250))"
+        scrollView.contentInsetAdjustmentBehavior = .never
     }
     
     @objc func didTapBack() {
         self.dismiss(animated: true)
     }
+}
+
+extension GraffityViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OtherWorkCell", for: indexPath)
+        (cell as? OtherWorkCellView)?.imageView.image = UIImage(named: "graffity\(Int.random(in: 0...12))")
+        return cell
+    }
+ 
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    
+}
+
+class OtherWorkCellView: UICollectionViewCell {
+    
+    @IBOutlet weak var imageView: UIImageView!
 }
