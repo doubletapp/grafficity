@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController {
             (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = CGSize(width: 1, height: 1)
 
             collectionView.register(ProfileHeaderCell.self)
+            collectionView.register(ProfilePhotosCell.self)
             collectionView.register(ProfileFilterCell.self)
         }
     }
@@ -25,6 +26,7 @@ class ProfileViewController: UIViewController {
 
         cellDescriptions.append(CollectionViewCellDescription(cellType: ProfileHeaderCell.self, object: nil))
         cellDescriptions.append(CollectionViewCellDescription(cellType: ProfileFilterCell.self, object: nil))
+        cellDescriptions.append(CollectionViewCellDescription(cellType: ProfilePhotosCell.self, object: nil))
 
         collectionView.reloadData()
     }

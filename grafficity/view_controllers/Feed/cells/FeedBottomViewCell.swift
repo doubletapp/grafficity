@@ -40,6 +40,6 @@ extension FeedBottomViewCell: BaseCollectionViewCell {
         
         countLabel.text = "\(object.count)"
         imageView.image = object.image
-        selectedView.image = #imageLiteral(resourceName: "star")
+        selectedView.image = object.selected ? #imageLiteral(resourceName: "star") : #imageLiteral(resourceName: "starOutline")
     }
 }

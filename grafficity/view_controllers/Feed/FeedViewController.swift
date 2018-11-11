@@ -15,6 +15,7 @@ class FeedViewController: UIViewController {
             bottomCollectionView.delegate = self
             bottomCollectionView.dataSource = self
             bottomCollectionView.register(FeedBottomViewCell.self)
+            bottomCollectionView.contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 25, right: 0)
         }
     }
     
@@ -62,32 +63,32 @@ class FeedViewController: UIViewController {
         cellDescriptionsTwo.append(CollectionViewCellDescription(cellType: FeedBottomViewCell.self,
                                                                  object: FeedBottomViewCellObject(count: Int.random(in: 1500...2000),
                                                                                                   selected: true,
-                                                                                                  image: #imageLiteral(resourceName: "graffity1"))))
+                                                                                                  image: #imageLiteral(resourceName: "graffity5"))))
         
         cellDescriptionsTwo.append(CollectionViewCellDescription(cellType: FeedBottomViewCell.self,
                                                                  object: FeedBottomViewCellObject(count: Int.random(in: 1500...2000),
                                                                                                   selected: true,
-                                                                                                  image: #imageLiteral(resourceName: "graffity1"))))
+                                                                                                  image: #imageLiteral(resourceName: "graffity8"))))
+        
+        cellDescriptionsTwo.append(CollectionViewCellDescription(cellType: FeedBottomViewCell.self,
+                                                                 object: FeedBottomViewCellObject(count: Int.random(in: 1500...2000),
+                                                                                                  selected: false,
+                                                                                                  image: #imageLiteral(resourceName: "graffity4"))))
         
         cellDescriptionsTwo.append(CollectionViewCellDescription(cellType: FeedBottomViewCell.self,
                                                                  object: FeedBottomViewCellObject(count: Int.random(in: 1500...2000),
                                                                                                   selected: true,
-                                                                                                  image: #imageLiteral(resourceName: "graffity1"))))
+                                                                                                  image: #imageLiteral(resourceName: "graffity7"))))
         
         cellDescriptionsTwo.append(CollectionViewCellDescription(cellType: FeedBottomViewCell.self,
                                                                  object: FeedBottomViewCellObject(count: Int.random(in: 1500...2000),
-                                                                                                  selected: true,
-                                                                                                  image: #imageLiteral(resourceName: "graffity1"))))
+                                                                                                  selected: false,
+                                                                                                  image: #imageLiteral(resourceName: "graffity2"))))
         
         cellDescriptionsTwo.append(CollectionViewCellDescription(cellType: FeedBottomViewCell.self,
                                                                  object: FeedBottomViewCellObject(count: Int.random(in: 1500...2000),
-                                                                                                  selected: true,
-                                                                                                  image: #imageLiteral(resourceName: "graffity1"))))
-        
-        cellDescriptionsTwo.append(CollectionViewCellDescription(cellType: FeedBottomViewCell.self,
-                                                                 object: FeedBottomViewCellObject(count: Int.random(in: 1500...2000),
-                                                                                                  selected: true,
-                                                                                                  image: #imageLiteral(resourceName: "graffity1"))))
+                                                                                                  selected: false,
+                                                                                                  image: #imageLiteral(resourceName: "graffity6"))))
     }
     
     @IBAction func filterDateAction() {
