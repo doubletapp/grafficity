@@ -129,6 +129,8 @@ class ARMapViewController: UIViewController {
         view.setNeedsLayout()
         view.layoutIfNeeded()
 
+        objectInfoView.updateRandomData()
+
         UIView.animate(
                 withDuration: 0.25,
                 animations: { [weak self] in
