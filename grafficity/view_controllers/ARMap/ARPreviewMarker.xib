@@ -12,6 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ARPreviewMarker" customModule="Grafficity" customModuleProvider="target">
             <connections>
                 <outlet property="bottomSpaceConstraint" destination="eUv-Qx-Wd7" id="lxs-3j-adc"/>
+                <outlet property="coverImage" destination="fiU-c0-z3v" id="yxZ-4I-8eH"/>
+                <outlet property="nameLabel" destination="eBU-aV-UxF" id="8ht-h1-e4e"/>
+                <outlet property="titleLabel" destination="TnI-nQ-Mxa" id="I5P-gu-c6f"/>
                 <outlet property="view" destination="tee-Px-K9o" id="GlF-R3-XWP"/>
             </connections>
         </placeholder>
