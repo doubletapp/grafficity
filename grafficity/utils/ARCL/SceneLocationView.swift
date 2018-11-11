@@ -74,7 +74,7 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
     var objectAnchor: ARAnchor?
     var detectedPlanes: [String: SCNNode] = [:]
     var placementOrientation: ARPlaneAnchor.Alignment = .horizontal
-    var bananaScene = SCNScene(named: "art.scnassets/banana.scn")
+    var bananaScene = SCNScene(named: "art.scnassets/12256_canadiangoos_v1_l3.scn")
 
     public private(set) var sceneNode: SCNNode? {
         didSet {
@@ -612,12 +612,12 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
     public func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         
         if !(anchor is ARPlaneAnchor),
-            let bananaNode = bananaScene?.rootNode.childNode(withName: "banana_001", recursively: true) {
+            let bananaNode = bananaScene?.rootNode.childNode(withName: "Body_02___Default", recursively: true) {
             
             let position = anchor.transform.translation
-            bananaNode.scale = SCNVector3(0.3, 0.3, 0.3)
-            bananaNode.position = SCNVector3(position.x, position.y + 1, position.z)
-            bananaNode.eulerAngles.z = .pi / 2
+            bananaNode.scale = SCNVector3(0.03, 0.03, 0.03)
+            bananaNode.position = SCNVector3(position.x, position.y + 0.5, position.z)
+            bananaNode.eulerAngles.x = -.pi / 2
             objectNode = bananaNode
             node.addChildNode(bananaNode)
         }
@@ -672,7 +672,7 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
             objectAnchor = nil
             objectNode?.removeFromParentNode()
             objectNode = nil
-            bananaScene = SCNScene(named: "art.scnassets/banana.scn")
+            bananaScene = SCNScene(named: "art.scnassets/12256_canadiangoos_v1_l3.scn")
         }
     }
     
